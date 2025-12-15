@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Contact() {
+
+
     return (
         <React.Fragment>
             <title>Contact | Mostafa Wahba </title>
@@ -44,7 +46,7 @@ function Contact() {
                             {/* <!-- Left Side Ends -->*/}
                             {/* <!-- Contact Form Starts -->*/}
                             <div className="col-12 col-lg-8">
-                                <form className="contactform" method="post" action="https://slimhamdi.net/tunis/dark/php/process-form.php">
+                                <form className="contactform" method="post" action=''>
                                     <div className="contactform">
                                         <div className="row">
                                             <div className="col-12 col-md-4">

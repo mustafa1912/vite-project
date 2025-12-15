@@ -1,7 +1,11 @@
-import "./assets/style/css/style.css";
+// style 
+import './assets/style/css/style.css';
+import './assets/style/css/yellow.css';
+// import './assets/style/css/purple.css';
+
 import { Route, Routes } from "react-router-dom";
 
-// import Switcher from './switch/Switcher';
+// import Switcher from './Components/switch/Switcher';
 import Header from "./Components/layout/Header";
 import Resume from "./Components/resume/Resume";
 import Blog from "./Components/blog/Blog";
@@ -12,7 +16,7 @@ import Contact from "./Components/contact/Contact";
 function App() {
     return (
         <div className="App">
-            {/* <Switcher />   */}
+            {/* <Switcher /> */}
             <Header />
             {/* <Routes /> */}
             <Routes>
