@@ -1,8 +1,33 @@
-# React + Vite
+# 🌐 Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📍 **Live Demo:** https://mostafa-wahba.vercel.app  
+📬 **Contact Page:** /contact
 
-Currently, two official plugins are available:
+## 🚀 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is my personal portfolio website built with React that showcases my skills, projects, and ways to contact me directly. It’s designed to highlight my development work and make it easy for visitors and recruiters to reach out.
+
+## 💡 Features
+
+- 🏠 **Home** – Introduction & Hero section
+- 💼 **Projects** – Showcase of my work
+- 🧠 **About** – Short bio and skills
+- 📬 **Contact** – Form or links to message me  
+- 🌍 Fully responsive UI  
+- ⚡️ Clean React components
+
+## 🛠️ Built With
+
+- React
+- Vite / Create React App (whichever you used)  
+- CSS / Tailwind / Styled Components (depends on your stack)
+
+## 📥 Installation
+
+Grab the repo and run locally:
+
+```bash
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+npm install
+npm start
