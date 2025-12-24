@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 // fontawesome
 import './assets/style/fontawesome/fontawesome/css/all.min.css';
@@ -16,10 +16,8 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <BrowserRouter> */}
-      <HashRouter>
-        <App />
-      </HashRouter>
-    {/* </BrowserRouter> */}
+    <BrowserRouter>
+         <App />
+     </BrowserRouter>
   </StrictMode>,
 )
