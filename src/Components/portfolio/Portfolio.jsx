@@ -6,110 +6,110 @@ import "@fancyapps/fancybox/dist/jquery.fancybox.min.js";
 // Import all images as modules (this ensures they work in dev and prod)
 
 // Import all images as modules (this ensures they work in dev and prod)
-import ugec1 from "../../assets/img/ugec1.webp";
-import ugec2 from "../../assets/img/ugec2.webp";
-import ugec3 from "../../assets/img/ugec3.webp";
-import ugec4 from "../../assets/img/ugec4.webp";
-import jawdaconsultant1 from "../../assets/img/jawdaconsultant1.webp"; 
-import jawdaconsultant3 from "../../assets/img/jawdaconsultant3.webp";
-import jawdaconsultant4 from "../../assets/img/jawdaconsultant4.webp";
-import alMotamizon1 from "../../assets/img/al-motamizon1.webp";
-import alMotamizon2 from "../../assets/img/al-motamizon2.webp";
-import alMotamizon3 from "../../assets/img/al-motamizon3.webp";
-import alMotamizon4 from "../../assets/img/al-motamizon4.webp";
-import alMotamizon5 from "../../assets/img/al-motamizon5.webp";
-import alMotamizon6 from "../../assets/img/al-motamizon6.webp";
-import alMotamizon7 from "../../assets/img/al-motamizon7.webp";
-import ghulam1 from "../../assets/img/ghulam1.webp";
-import ghulam2 from "../../assets/img/ghulam2.webp";
-import ghulam3 from "../../assets/img/ghulam3.webp";
-import ghulam4 from "../../assets/img/ghulam4.webp";
-import ghulam5 from "../../assets/img/ghulam5.webp";
-import ghulam6 from "../../assets/img/ghulam6.webp";
-import ghulam7 from "../../assets/img/ghulam7.webp"; 
-import ghulam9 from "../../assets/img/ghulam9.webp";
-import noorcontrol1 from "../../assets/img/noorcontrol1.webp";
-import noorcontrol2 from "../../assets/img/noorcontrol2.webp";
-import noorcontrol3 from "../../assets/img/noorcontrol3.webp";
-import noorcontrol4 from "../../assets/img/noorcontrol4.webp";
-import noorcontrol5 from "../../assets/img/noorcontrol5.webp";
-import noorcontrol6 from "../../assets/img/noorcontrol6.webp";
-import noorcontrol7 from "../../assets/img/noorcontrol7.webp";
-import asiaf1 from "../../assets/img/asiaf1.webp";
-import asiaf2 from "../../assets/img/asiaf2.webp";
-import asiaf3 from "../../assets/img/asiaf3.webp";
-import asiaf4 from "../../assets/img/asiaf4.webp";
-import asiaf5 from "../../assets/img/asiaf5.webp";
-import kfsHiet1 from "../../assets/img/kfs-hiet1.webp";
-import kfsHiet2 from "../../assets/img/kfs-hiet2.webp";
-import kfsHiet3 from "../../assets/img/kfs-hiet3.webp";
-import kfsHiet4 from "../../assets/img/kfs-hiet4.webp";
-import kfsHiet5 from "../../assets/img/kfs-hiet5.webp";
-import kfsHiet6 from "../../assets/img/kfs-hiet6.webp";
-import kfsHiet7 from "../../assets/img/kfs-hiet7.webp";
-import kfsHiet8 from "../../assets/img/kfs-hiet8.webp";
-import kfsHiet9 from "../../assets/img/kfs-hiet9.webp";
-import kfsHiet10 from "../../assets/img/kfs-hiet10.webp";
-import citysquares1 from "../../assets/img/citysquares1.webp";
-import citysquares2 from "../../assets/img/citysquares2.webp";
-import citysquares3 from "../../assets/img/citysquares3.webp";
-import citysquares4 from "../../assets/img/citysquares4.webp";
-import citysquares5 from "../../assets/img/citysquares5.webp";
-import citysquares6 from "../../assets/img/citysquares6.webp";
-import citysquares7 from "../../assets/img/citysquares7.webp";
-import osqufia1 from "../../assets/img/osqufia1.webp";
-import osqufia2 from "../../assets/img/osqufia2.webp";
-import osqufia3 from "../../assets/img/osqufia3.webp";
-import osqufia4 from "../../assets/img/osqufia4.webp";
-import osqufia5 from "../../assets/img/osqufia5.webp";
-import osqufia6 from "../../assets/img/osqufia6.webp";
-import osqufia7 from "../../assets/img/osqufia7.webp";
-import osqufia8 from "../../assets/img/osqufia8.webp";
-import osqufia9 from "../../assets/img/osqufia9.webp";
-import osqufia10 from "../../assets/img/osqufia10.webp";
-import osqufia11 from "../../assets/img/osqufia11.webp";
-import osqufia12 from "../../assets/img/osqufia12.webp";
-import osqufia13 from "../../assets/img/osqufia13.webp";
-import osqufia14 from "../../assets/img/osqufia14.webp";
-import osqufia15 from "../../assets/img/osqufia15.webp";
-import osqufia16 from "../../assets/img/osqufia16.webp";
-import whitesand1 from "../../assets/img/whitesand1.webp";
-import whitesand2 from "../../assets/img/whitesand2.webp";
-import whitesand3 from "../../assets/img/whitesand3.webp";
-import whitesand4 from "../../assets/img/whitesand4.webp";
-import whitesand5 from "../../assets/img/whitesand5.webp";
-import us1 from "../../assets/img/us1.webp";
-import us2 from "../../assets/img/us2.webp";
-import us3 from "../../assets/img/us3.webp";
-import us4 from "../../assets/img/us4.webp";
-import us5 from "../../assets/img/us5.webp";
-import us6 from "../../assets/img/us6.webp";
-import us7 from "../../assets/img/us7.webp";
-import us8 from "../../assets/img/us8.webp";
-import us9 from "../../assets/img/us9.webp";
-import cms from "../../assets/img/cms.webp";
-import hcr1 from "../../assets/img/hcr1.webp";
-import naseq8 from "../../assets/img/naseq8.webp";
-import thite1 from "../../assets/img/thite1.webp";
-import thite2 from "../../assets/img/thite2.webp";
-import thite3 from "../../assets/img/thite3.webp";
-import thite4 from "../../assets/img/thite4.webp";
-import thite5 from "../../assets/img/thite5.webp";
-import thite6 from "../../assets/img/thite6.webp";
-import henkleez7 from "../../assets/img/henkleez7.webp";
-import market1 from "../../assets/img/market1.webp";
-import market2 from "../../assets/img/market2.webp";
-import market3 from "../../assets/img/market3.webp";
-import market4 from "../../assets/img/market4.webp";
-import market5 from "../../assets/img/market5.webp";
-import market9 from "../../assets/img/market9.webp";
-import dashboed1 from "../../assets/img/dashboed1.webp";
-import dashboed2 from "../../assets/img/dashboed2.webp";
-import dashboed3 from "../../assets/img/dashboed3.webp";
-import dashboed4 from "../../assets/img/dashboed4.webp";
-import dashboed5 from "../../assets/img/dashboed5.webp";
-import dashboed6 from "../../assets/img/dashboed6.webp";
-import dashboed7 from "../../assets/img/dashboed7.webp"; 
+import ugec1 from "../../assets/img/ugec1_result.webp";
+import ugec2 from "../../assets/img/ugec2_result.webp";
+import ugec3 from "../../assets/img/ugec3_result.webp";
+import ugec4 from "../../assets/img/ugec4_result.webp";
+import jawdaconsultant1 from "../../assets/img/jawdaconsultant1_result.webp"; 
+import jawdaconsultant3 from "../../assets/img/jawdaconsultant3_result.webp";
+import jawdaconsultant4 from "../../assets/img/jawdaconsultant4_result.webp";
+import alMotamizon1 from "../../assets/img/al-motamizon1_result.webp";
+import alMotamizon2 from "../../assets/img/al-motamizon2_result.webp";
+import alMotamizon3 from "../../assets/img/al-motamizon3_result.webp";
+import alMotamizon4 from "../../assets/img/al-motamizon4_result.webp";
+import alMotamizon5 from "../../assets/img/al-motamizon5_result.webp";
+import alMotamizon6 from "../../assets/img/al-motamizon6_result.webp";
+import alMotamizon7 from "../../assets/img/al-motamizon7_result.webp";
+import ghulam1 from "../../assets/img/ghulam1_result.webp";
+import ghulam2 from "../../assets/img/ghulam2_result.webp";
+import ghulam3 from "../../assets/img/ghulam3_result.webp";
+import ghulam4 from "../../assets/img/ghulam4_result.webp";
+import ghulam5 from "../../assets/img/ghulam5_result.webp";
+import ghulam6 from "../../assets/img/ghulam6_result.webp";
+import ghulam7 from "../../assets/img/ghulam7_result.webp"; 
+import ghulam9 from "../../assets/img/ghulam9_result.webp";
+import noorcontrol1 from "../../assets/img/noorcontrol1_result.webp";
+import noorcontrol2 from "../../assets/img/noorcontrol2_result.webp";
+import noorcontrol3 from "../../assets/img/noorcontrol3_result.webp";
+import noorcontrol4 from "../../assets/img/noorcontrol4_result.webp";
+import noorcontrol5 from "../../assets/img/noorcontrol5_result.webp";
+import noorcontrol6 from "../../assets/img/noorcontrol6_result.webp";
+import noorcontrol7 from "../../assets/img/noorcontrol7_result.webp";
+import asiaf1 from "../../assets/img/asiaf1_result.webp";
+import asiaf2 from "../../assets/img/asiaf2_result.webp";
+import asiaf3 from "../../assets/img/asiaf3_result.webp";
+import asiaf4 from "../../assets/img/asiaf4_result.webp";
+import asiaf5 from "../../assets/img/asiaf5_result.webp";
+import kfsHiet1 from "../../assets/img/kfs-hiet1_result.webp";
+import kfsHiet2 from "../../assets/img/kfs-hiet2_result.webp";
+import kfsHiet3 from "../../assets/img/kfs-hiet3_result.webp";
+import kfsHiet4 from "../../assets/img/kfs-hiet4_result.webp";
+import kfsHiet5 from "../../assets/img/kfs-hiet5_result.webp";
+import kfsHiet6 from "../../assets/img/kfs-hiet6_result.webp";
+import kfsHiet7 from "../../assets/img/kfs-hiet7_result.webp";
+import kfsHiet8 from "../../assets/img/kfs-hiet8_result.webp";
+import kfsHiet9 from "../../assets/img/kfs-hiet9_result.webp";
+import kfsHiet10 from "../../assets/img/kfs-hiet10_result.webp";
+import citysquares1 from "../../assets/img/citysquares1_result.webp";
+import citysquares2 from "../../assets/img/citysquares2_result.webp";
+import citysquares3 from "../../assets/img/citysquares3_result.webp";
+import citysquares4 from "../../assets/img/citysquares4_result.webp";
+import citysquares5 from "../../assets/img/citysquares5_result.webp";
+import citysquares6 from "../../assets/img/citysquares6_result.webp";
+import citysquares7 from "../../assets/img/citysquares7_result.webp";
+import osqufia1 from "../../assets/img/osqufia1_result.webp";
+import osqufia2 from "../../assets/img/osqufia2_result.webp";
+import osqufia3 from "../../assets/img/osqufia3_result.webp";
+import osqufia4 from "../../assets/img/osqufia4_result.webp";
+import osqufia5 from "../../assets/img/osqufia5_result.webp";
+import osqufia6 from "../../assets/img/osqufia6_result.webp";
+import osqufia7 from "../../assets/img/osqufia7_result.webp";
+import osqufia8 from "../../assets/img/osqufia8_result.webp";
+import osqufia9 from "../../assets/img/osqufia9_result.webp";
+import osqufia10 from "../../assets/img/osqufia10_result.webp";
+import osqufia11 from "../../assets/img/osqufia11_result.webp";
+import osqufia12 from "../../assets/img/osqufia12_result.webp";
+import osqufia13 from "../../assets/img/osqufia13_result.webp";
+import osqufia14 from "../../assets/img/osqufia14_result.webp";
+import osqufia15 from "../../assets/img/osqufia15_result.webp";
+import osqufia16 from "../../assets/img/osqufia16_result.webp";
+import whitesand1 from "../../assets/img/whitesand1_result.webp";
+import whitesand2 from "../../assets/img/whitesand2_result.webp";
+import whitesand3 from "../../assets/img/whitesand3_result.webp";
+import whitesand4 from "../../assets/img/whitesand4_result.webp";
+import whitesand5 from "../../assets/img/whitesand5_result.webp";
+import us1 from "../../assets/img/us1_result.webp";
+import us2 from "../../assets/img/us2_result.webp";
+import us3 from "../../assets/img/us3_result.webp";
+import us4 from "../../assets/img/us4_result.webp";
+import us5 from "../../assets/img/us5_result.webp";
+import us6 from "../../assets/img/us6_result.webp";
+import us7 from "../../assets/img/us7_result.webp";
+import us8 from "../../assets/img/us8_result.webp";
+import us9 from "../../assets/img/us9_result.webp";
+import cms from "../../assets/img/cms_result.webp";
+import hcr1 from "../../assets/img/hcr1_result.webp";
+import naseq8 from "../../assets/img/naseq8_result.webp";
+import thite1 from "../../assets/img/thite1_result.webp";
+import thite2 from "../../assets/img/thite2_result.webp";
+import thite3 from "../../assets/img/thite3_result.webp";
+import thite4 from "../../assets/img/thite4_result.webp";
+import thite5 from "../../assets/img/thite5_result.webp";
+import thite6 from "../../assets/img/thite6_result.webp";
+import henkleez7 from "../../assets/img/henkleez7_result.webp";
+import market1 from "../../assets/img/market1_result.webp";
+import market2 from "../../assets/img/market2_result.webp";
+import market3 from "../../assets/img/market3_result.webp";
+import market4 from "../../assets/img/market4_result.webp";
+import market5 from "../../assets/img/market5_result.webp";
+import market9 from "../../assets/img/market9_result.webp";
+import dashboed1 from "../../assets/img/dashboed1_result.webp";
+import dashboed2 from "../../assets/img/dashboed2_result.webp";
+import dashboed3 from "../../assets/img/dashboed3_result.webp";
+import dashboed4 from "../../assets/img/dashboed4_result.webp";
+import dashboed5 from "../../assets/img/dashboed5_result.webp";
+import dashboed6 from "../../assets/img/dashboed6_result.webp";
+import dashboed7 from "../../assets/img/dashboed7_result.webp"; 
 
 
 function Portfolio() {
@@ -135,135 +135,135 @@ function Portfolio() {
             { href: dashboed7, title: 'dashboed Project', url: '#', date: ' Feb 2020  ' },
         ],
         dashboed: [
-            { href: 'src/assets/img/dashboed1.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed2.webp', title: 'dashboed Project' }
+            { href: 'src/assets/img/dashboed1_result.webp', title: 'dashboed Project' },
+            { href: 'src/assets/img/dashboed2_result.webp', title: 'dashboed Project' }
         ],
         HCR: [
-            { href: 'src/assets/img/dashboed1.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed2.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed3.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed4.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed5.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed6.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed7.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed8.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed9.webp', title: 'dashboed Project' }
+            { href: 'src/assets/img/dashboed1_result.webp', title: 'dashboed Project' },
+            { href: 'src/assets/img/dashboed2_result.webp', title: 'dashboed Project' },
+            { href: 'src/assets/img/dashboed3_result.webp', title: 'dashboed Project' },
+            { href: 'src/assets/img/dashboed4_result.webp', title: 'dashboed Project' },
+            { href: 'src/assets/img/dashboed5_result.webp', title: 'dashboed Project' },
+            { href: 'src/assets/img/dashboed6_result.webp', title: 'dashboed Project' },
+            { href: 'src/assets/img/dashboed7_result.webp', title: 'dashboed Project' },
+            { href: 'src/assets/img/dashboed8_result.webp', title: 'dashboed Project' },
+            { href: 'src/assets/img/dashboed9_result.webp', title: 'dashboed Project' }
         ],
         market: [
-            { href: 'src/assets/img/market1.webp', title: 'market Project' },
-            { href: 'src/assets/img/market2.webp', title: 'market Project' },
-            { href: 'src/assets/img/market3.webp', title: 'market Project' },
-            { href: 'src/assets/img/market4.webp', title: 'market Project' },
-            { href: 'src/assets/img/market5.webp', title: 'market Project' }
+            { href: 'src/assets/img/market1_result.webp', title: 'market Project' },
+            { href: 'src/assets/img/market2_result.webp', title: 'market Project' },
+            { href: 'src/assets/img/market3_result.webp', title: 'market Project' },
+            { href: 'src/assets/img/market4_result.webp', title: 'market Project' },
+            { href: 'src/assets/img/market5_result.webp', title: 'market Project' }
         ],
         osqufia: [
-            { href: 'src/assets/img/osqufia1.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia2.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia3.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia4.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia5.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia6.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia7.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia8.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia9.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia10.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia11.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia12.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia13.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia14.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia15.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia16.webp', title: 'osqufia Project' }
+            { href: 'src/assets/img/osqufia1_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia2_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia3_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia4_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia5_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia6_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia7_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia8_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia9_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia10_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia11_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia12_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia13_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia14_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia15_result.webp', title: 'osqufia Project' },
+            { href: 'src/assets/img/osqufia16_result.webp', title: 'osqufia Project' }
         ],
         thite: [
-            { href: 'src/assets/img/thite1.webp', title: 'thite' },
-            { href: 'src/assets/img/thite2.webp', title: 'thite' },
-            { href: 'src/assets/img/thite3.webp', title: 'thite' },
-            { href: 'src/assets/img/thite4.webp', title: 'thite' },
-            { href: 'src/assets/img/thite5.webp', title: 'thite' },
-            { href: 'src/assets/img/thite6.webp', title: 'thite' }
+            { href: 'src/assets/img/thite1_result.webp', title: 'thite' },
+            { href: 'src/assets/img/thite2_result.webp', title: 'thite' },
+            { href: 'src/assets/img/thite3_result.webp', title: 'thite' },
+            { href: 'src/assets/img/thite4_result.webp', title: 'thite' },
+            { href: 'src/assets/img/thite5_result.webp', title: 'thite' },
+            { href: 'src/assets/img/thite6_result.webp', title: 'thite' }
         ],
         us: [
-            { href: 'src/assets/img/us1.webp', title: 'us Project' },
-            { href: 'src/assets/img/us2.webp', title: 'us Project' },
-            { href: 'src/assets/img/us3.webp', title: 'us Project' },
-            { href: 'src/assets/img/us4.webp', title: 'us Project' },
-            { href: 'src/assets/img/us5.webp', title: 'us Project' },
-            { href: 'src/assets/img/us6.webp', title: 'us Project' },
-            { href: 'src/assets/img/us7.webp', title: 'us Project' },
-            { href: 'src/assets/img/us8.webp', title: 'us Project' },
-            { href: 'src/assets/img/us9.webp', title: 'us Project' }
+            { href: 'src/assets/img/us1_result.webp', title: 'us Project' },
+            { href: 'src/assets/img/us2_result.webp', title: 'us Project' },
+            { href: 'src/assets/img/us3_result.webp', title: 'us Project' },
+            { href: 'src/assets/img/us4_result.webp', title: 'us Project' },
+            { href: 'src/assets/img/us5_result.webp', title: 'us Project' },
+            { href: 'src/assets/img/us6_result.webp', title: 'us Project' },
+            { href: 'src/assets/img/us7_result.webp', title: 'us Project' },
+            { href: 'src/assets/img/us8_result.webp', title: 'us Project' },
+            { href: 'src/assets/img/us9_result.webp', title: 'us Project' }
         ],
         al_motamizon: [
-            { href: 'src/assets/img/al-motamizon7.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon6.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon5.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon4.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon3.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon2.webp', title: 'al-motamizon Project' },
+            { href: 'src/assets/img/al-motamizon7_result.webp', title: 'al-motamizon Project' },
+            { href: 'src/assets/img/al-motamizon6_result.webp', title: 'al-motamizon Project' },
+            { href: 'src/assets/img/al-motamizon5_result.webp', title: 'al-motamizon Project' },
+            { href: 'src/assets/img/al-motamizon4_result.webp', title: 'al-motamizon Project' },
+            { href: 'src/assets/img/al-motamizon3_result.webp', title: 'al-motamizon Project' },
+            { href: 'src/assets/img/al-motamizon2_result.webp', title: 'al-motamizon Project' },
         ],
         jawdaconsultant: [
-            { href: 'src/assets/img/jawdaconsultant4.webp', title: 'jawdaconsultant Project' },
-            { href: 'src/assets/img/jawdaconsultant3.webp', title: 'jawdaconsultant Project' },
-            { href: 'src/assets/img/jawdaconsultant2.webp', title: 'jawdaconsultant Project' },
-            { href: 'src/assets/img/jawdaconsultant1.webp', title: 'jawdaconsultant Project' },
+            { href: 'src/assets/img/jawdaconsultant4_result.webp', title: 'jawdaconsultant Project' },
+            { href: 'src/assets/img/jawdaconsultant3_result.webp', title: 'jawdaconsultant Project' },
+            { href: 'src/assets/img/jawdaconsultant2_result.webp', title: 'jawdaconsultant Project' },
+            { href: 'src/assets/img/jawdaconsultant1_result.webp', title: 'jawdaconsultant Project' },
         ],
         ugec: [
-            { href: 'src/assets/img/ugec4.webp', title: 'ugec Project' },
-            { href: 'src/assets/img/ugec3.webp', title: 'ugec Project' },
-            { href: 'src/assets/img/ugec2.webp', title: 'ugec Project' },
-            { href: 'src/assets/img/ugec1.webp', title: 'ugec Project' },
+            { href: 'src/assets/img/ugec4_result.webp', title: 'ugec Project' },
+            { href: 'src/assets/img/ugec3_result.webp', title: 'ugec Project' },
+            { href: 'src/assets/img/ugec2_result.webp', title: 'ugec Project' },
+            { href: 'src/assets/img/ugec1_result.webp', title: 'ugec Project' },
         ],
         noorcontrol: [
-            { href: 'src/assets/img/noorcontrol7.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol6.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol5.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol4.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol3.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol2.webp', title: 'noorcontrol Project' },
+            { href: 'src/assets/img/noorcontrol7_result.webp', title: 'noorcontrol Project' },
+            { href: 'src/assets/img/noorcontrol6_result.webp', title: 'noorcontrol Project' },
+            { href: 'src/assets/img/noorcontrol5_result.webp', title: 'noorcontrol Project' },
+            { href: 'src/assets/img/noorcontrol4_result.webp', title: 'noorcontrol Project' },
+            { href: 'src/assets/img/noorcontrol3_result.webp', title: 'noorcontrol Project' },
+            { href: 'src/assets/img/noorcontrol2_result.webp', title: 'noorcontrol Project' },
         ],
         asiaf: [
-            { href: 'src/assets/img/asiaf5.webp', title: 'asiaf Project' },
-            { href: 'src/assets/img/asiaf4.webp', title: 'asiaf Project' },
-            { href: 'src/assets/img/asiaf3.webp', title: 'asiaf Project' },
-            { href: 'src/assets/img/asiaf2.webp', title: 'asiaf Project' },
+            { href: 'src/assets/img/asiaf5_result.webp', title: 'asiaf Project' },
+            { href: 'src/assets/img/asiaf4_result.webp', title: 'asiaf Project' },
+            { href: 'src/assets/img/asiaf3_result.webp', title: 'asiaf Project' },
+            { href: 'src/assets/img/asiaf2_result.webp', title: 'asiaf Project' },
         ],
         citysquares: [
-            { href: 'src/assets/img/citysquares7.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares6.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares5.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares4.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares3.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares2.webp', title: 'citysquares Project' },
+            { href: 'src/assets/img/citysquares7_result.webp', title: 'citysquares Project' },
+            { href: 'src/assets/img/citysquares6_result.webp', title: 'citysquares Project' },
+            { href: 'src/assets/img/citysquares5_result.webp', title: 'citysquares Project' },
+            { href: 'src/assets/img/citysquares4_result.webp', title: 'citysquares Project' },
+            { href: 'src/assets/img/citysquares3_result.webp', title: 'citysquares Project' },
+            { href: 'src/assets/img/citysquares2_result.webp', title: 'citysquares Project' },
         ],
         ghulam: [
-            { href: 'src/assets/img/ghulam1.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam2.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam3.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam4.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam5.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam6.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam7.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam8.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam9.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/ghulam1_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/ghulam2_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/ghulam3_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/ghulam4_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/ghulam5_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/ghulam6_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/ghulam7_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/ghulam8_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/ghulam9_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
         ],
         kfs_hiet: [
-            { href: 'src/assets/img/kfs-hiet1.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet2.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet3.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet4.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet5.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet6.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet7.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet8.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet9.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet10.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet1_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet2_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet3_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet4_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet5_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet6_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet7_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet8_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet9_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/kfs-hiet10_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
         ],
         whitesand: [
-            { href: 'src/assets/img/whitesand1.webp', title: 'whitesand Project' },
-            { href: 'src/assets/img/whitesand2.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/whitesand3.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/whitesand4.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/whitesand5.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/whitesand1_result.webp', title: 'whitesand Project' },
+            { href: 'src/assets/img/whitesand2_result.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/whitesand3_result.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/whitesand4_result.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
+            { href: 'src/assets/img/whitesand5_result.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
         ],
 
     };
