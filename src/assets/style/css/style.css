@@ -747,6 +747,9 @@ body.light hr.separator {
   border-left: 1px solid #ffb400;
 }
 .about .resume-box .icon {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
   width: 40px;
   height: 40px;
   position: absolute;
@@ -1207,17 +1210,19 @@ body.light hr.separator {
 }
 
 .contact ul.social li a {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  line-height: 42px;
-  text-align: center;
-  color: #fff;
-  transition: 0.3s;
-  font-size: 17px;
-  margin: 0 6px;
-  background: #2b2a2a;
-  border-radius: 50%;
+    display: inline-flex;
+    height: 40px;
+    width: 40px;
+    line-height: 42px;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 17px;
+    margin: 0 6px;
+    background: #2b2a2a;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 }
 /* Form */
 .contact .contactform input[type="text"],
