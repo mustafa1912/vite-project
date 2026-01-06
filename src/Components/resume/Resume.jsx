@@ -75,7 +75,7 @@ function Resume() {
                                         </ul>
                                     </div>
                                     <div className="col-12 mt-3">
-                                        <a className="button" href={'./assets/mostafa-wahba-cv'} download>
+                                        <a className="button" href={'./assets/mostafa_wahba_FrontEnd_cv'} download>
                                             <span className="button-text">Download CV</span>
                                             <span className="button-icon fa fa-download"></span>
                                         </a>
