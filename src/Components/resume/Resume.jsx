@@ -1,4 +1,6 @@
 import React from 'react'
+// import img
+import profileImg from "../../assets/img/me/H22C1262.webp";
 
 function Resume() {
 
@@ -29,7 +31,7 @@ function Resume() {
                                         <h3 className="text-uppercase custom-title mb-0 ft-wt-600">personal infos</h3>
                                     </div>
                                     <div className="col-12 d-block d-sm-none">
-                                        <img src={'src/assets/img/me/H22C11901.webp'}
+                                        <img src={profileImg}
                                             className="img-fluid main-img-mobile" title='Mostafa Wahba' alt='Mostafa Wahba' />
                                     </div>
                                     <div className="col-6">

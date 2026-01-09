@@ -1,6 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
+// import img
+import profileImg from "../../assets/img/me/H22C1262.webp";
+
 function Home() {
 
     return (
@@ -19,7 +22,7 @@ function Home() {
                         <div className="col-lg-4 bg position-fixed d-none d-lg-block"></div>
                         <div className="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
                             <div>
-                                <img src={'src/assets/img/me/H22C1262.webp'}
+                                <img src={profileImg}
                                     className="img-fluid d-sm-block d-lg-none rounded  " title='Mostafa Wahba' alt='Mostafa Wahba' />
                                 <h1 className="text-uppercase poppins-font">Im mostafa wahba.<span>Front-End Developer</span></h1>
                                 <p className="open-sans-font">
