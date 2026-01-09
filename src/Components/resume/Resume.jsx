@@ -223,6 +223,16 @@ function Resume() {
                             </div>
                             <div className="col-6 col-md-3 mb-3 mb-sm-5">
                                 <div className="c100 p100">
+                                    <span> elementor </span>
+                                    <div className="slice">
+                                        <div className="bar"></div>
+                                        <div className="fill"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
+                                <div className="c100 p100">
                                     <span> SEO </span>
                                     <div className="slice">
                                         <div className="bar"></div>
