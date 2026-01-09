@@ -6,11 +6,18 @@ import "@fancyapps/fancybox/dist/jquery.fancybox.min.js";
 // Import all images as modules (this ensures they work in dev and prod)
 
 // Import all images as modules (this ensures they work in dev and prod)
+import insidermenofia1 from "../../assets/img/insidermenofia1.webp";
+import insidermenofia2 from "../../assets/img/insidermenofia2.webp";
+import insidermenofia3 from "../../assets/img/insidermenofia3.webp";
+import insidermenofia4 from "../../assets/img/insidermenofia4.webp";
+import insidermenofia5 from "../../assets/img/insidermenofia5.webp";
+import insidermenofia6 from "../../assets/img/insidermenofia6.webp";
+import insidermenofia7 from "../../assets/img/insidermenofia7.webp";
 import ugec1 from "../../assets/img/ugec1_result.webp";
 import ugec2 from "../../assets/img/ugec2_result.webp";
 import ugec3 from "../../assets/img/ugec3_result.webp";
 import ugec4 from "../../assets/img/ugec4_result.webp";
-import jawdaconsultant1 from "../../assets/img/jawdaconsultant1_result.webp"; 
+import jawdaconsultant1 from "../../assets/img/jawdaconsultant1_result.webp";
 import jawdaconsultant3 from "../../assets/img/jawdaconsultant3_result.webp";
 import jawdaconsultant4 from "../../assets/img/jawdaconsultant4_result.webp";
 import alMotamizon1 from "../../assets/img/al-motamizon1_result.webp";
@@ -26,7 +33,7 @@ import ghulam3 from "../../assets/img/ghulam3_result.webp";
 import ghulam4 from "../../assets/img/ghulam4_result.webp";
 import ghulam5 from "../../assets/img/ghulam5_result.webp";
 import ghulam6 from "../../assets/img/ghulam6_result.webp";
-import ghulam7 from "../../assets/img/ghulam7_result.webp"; 
+import ghulam7 from "../../assets/img/ghulam7_result.webp";
 import ghulam9 from "../../assets/img/ghulam9_result.webp";
 import noorcontrol1 from "../../assets/img/noorcontrol1_result.webp";
 import noorcontrol2 from "../../assets/img/noorcontrol2_result.webp";
@@ -109,12 +116,13 @@ import dashboed3 from "../../assets/img/dashboed3_result.webp";
 import dashboed4 from "../../assets/img/dashboed4_result.webp";
 import dashboed5 from "../../assets/img/dashboed5_result.webp";
 import dashboed6 from "../../assets/img/dashboed6_result.webp";
-import dashboed7 from "../../assets/img/dashboed7_result.webp"; 
+import dashboed7 from "../../assets/img/dashboed7_result.webp";
 
 
 function Portfolio() {
     const projectCategories = {
         Projects: [
+            { href: insidermenofia1, title: 'insidermenofia Project', url: 'https://insidermenofia.com/', date: ' Oct 2025  ' },
             { href: ugec1, title: 'ugec Project', url: 'https://ugec.souqmsr.com/', date: ' Nov 2024  ' },
             { href: jawdaconsultant1, title: 'jawdaconsultant Project', url: 'https://jawdaconsultant.com', date: ' jan 2024  ' },
             { href: alMotamizon1, title: 'al-motamizon Project', url: 'https://al-motamizon.com/ar', date: ' Dec 2023  ' },
@@ -206,6 +214,14 @@ function Portfolio() {
             { href: 'src/assets/img/jawdaconsultant3_result.webp', title: 'jawdaconsultant Project' },
             { href: 'src/assets/img/jawdaconsultant2_result.webp', title: 'jawdaconsultant Project' },
             { href: 'src/assets/img/jawdaconsultant1_result.webp', title: 'jawdaconsultant Project' },
+        ],
+        insidermenofia: [
+            { href: 'src/assets/img/insidermenofia2.webp', title: 'insidermenofia Project' },
+            { href: 'src/assets/img/insidermenofia3.webp', title: 'insidermenofia Project' },
+            { href: 'src/assets/img/insidermenofia4.webp', title: 'insidermenofia Project' },
+            { href: 'src/assets/img/insidermenofia5.webp', title: 'insidermenofia Project' },
+            { href: 'src/assets/img/insidermenofia6.webp', title: 'insidermenofia Project' },
+            { href: 'src/assets/img/insidermenofia7.webp', title: 'insidermenofia Project' },
         ],
         ugec: [
             { href: 'src/assets/img/ugec4_result.webp', title: 'ugec Project' },
