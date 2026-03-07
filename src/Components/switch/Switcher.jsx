@@ -7,7 +7,10 @@ function Switcher() {
         setIsSwitcherOpen(!IsSwitcherOpen)
     }
     // colors 
-    const [activeColor, setActiveColor] = useState('yellow')
+    const [activeColor, setActiveColor] = useState(() => {
+        return sessionStorage.getItem('activeColor') || 'yellow'
+    })
+
     // البيانات برة الـ component عشان متتعملش كل render
     const COLORS = [
         'purple', 'red', 'blueviolet', 'blue',
@@ -16,7 +19,8 @@ function Switcher() {
     ]
 
     useEffect(() => {
-        // شيل الـ CSS القديم قبل ما تحمل الجديد
+        sessionStorage.setItem('activeColor', activeColor)
+
         const oldLink = document.getElementById('color-theme')
         if (oldLink) oldLink.remove()
 
