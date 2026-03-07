@@ -17,7 +17,7 @@
 #switcher.true {
   transform: translateX(0%);
 }
-#switcher.true {
+#switcher.false {
   transform: translateX(-100%);
 }
 #switcher label {

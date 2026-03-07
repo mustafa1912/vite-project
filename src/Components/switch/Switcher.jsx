@@ -1,4 +1,4 @@
-import React, { useState, use } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Switcher() {
     // Switcher
@@ -7,12 +7,28 @@ function Switcher() {
         setIsSwitcherOpen(!IsSwitcherOpen)
     }
     // colors 
-    const [ActiveColor, setActiveColor] = useState('yellow')
-    const handelActiveColor = (color) => {
-        setActiveColor(color)
-        console.log(ActiveColor)
-    }
-    // const UseActiveColor = use(ActiveColor)
+    const [activeColor, setActiveColor] = useState('yellow')
+    // البيانات برة الـ component عشان متتعملش كل render
+    const COLORS = [
+        'purple', 'red', 'blueviolet', 'blue',
+        'goldenrod', 'magenta', 'yellowgreen',
+        'orange', 'green', 'yellow'
+    ]
+
+    useEffect(() => {
+        // شيل الـ CSS القديم قبل ما تحمل الجديد
+        const oldLink = document.getElementById('color-theme')
+        if (oldLink) oldLink.remove()
+
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.id = 'color-theme'
+        link.href = `/src/assets/style/css/${activeColor}.css`
+        document.head.appendChild(link)
+    }, [activeColor])
+
+
+
     return (
         <React.Fragment>
             <div id="preloader" className="preloader off" >
@@ -23,55 +39,20 @@ function Switcher() {
                 <div className="content-switcher">
                     <h4 >STYLE SWITCHER</h4>
                     <ul>
-                        <li>
-                            <span
-                                onClick={() => handelActiveColor('purple')}
-                                title="purple" className="color my-2">
-                                <img
-                                    src={'src/assets/images/purple.png'} alt="purple" /></span>
-                        </li>
-                        <li>
-                            <span onClick={() => handelActiveColor('red')}
-                                title="red" className="color my-2"><img src={'src/assets/images/red.png'}
-                                    alt="red" /></span>
-                        </li>
-                        <li>
-                            <span onClick={() => handelActiveColor('blueviolet')}
-                                title="blueviolet" className="color my-2"><img
-                                    src={'src/assets/images/blueviolet.png'} alt="blueviolet" /></span>
-                        </li>
-                        <li>
-                            <span onClick={() => handelActiveColor('blue')}
-                                title="blue" className="color my-2"><img
-                                    src={'src/assets/images/blue.png'} alt="blue" /></span>
-                        </li>
-                        <li>
-                            <span onClick={() => handelActiveColor('goldenrod')} title="goldenrod" className="color my-2"><img
-                                src={'src/assets/images/goldenrod.png'} alt="goldenrod" /></span>
-                        </li>
-                        <li>
-                            <span onClick={() => handelActiveColor('magenta')} title="magenta" className="color my-2"><img
-                                src={'src/assets/images/magenta.png'} alt="magenta" /></span>
-                        </li>
-                        <li>
-                            <span onClick={() => handelActiveColor('yellowgreen')}
-                                title="yellowgreen" className="color my-2"><img
-                                    src={'src/assets/images/yellowgreen.png'} alt="yellowgreen" /></span>
-                        </li>
-                        <li>
-                            <span onClick={() => handelActiveColor('orange')}
-                                title="orange" className="color my-2"><img
-                                    src={'src/assets/images/orange.png'} alt="orange" /></span>
-                        </li>
-                        <li>
-                            <span onClick={() => handelActiveColor('green')}
-                                title="green" className="color my-2"><img
-                                    src={'src/assets/images/green.png'} alt="green" /></span>
-                        </li>
-                        <li>
-                            <span onClick={() => handelActiveColor('purple')} title="yellow" className="color my-2"><img
-                                src={'src/assets/images/yellow.png'} alt="yellow" /></span>
-                        </li>
+                        {COLORS.map((color) => (
+                            <li key={color}>
+                                <span
+                                    onClick={() => setActiveColor(color)}
+                                    title={color}
+                                    className={`color my-2 ${activeColor === color ? 'active' : ''}`}
+                                >
+                                    <img
+                                        src={`src/assets/images/${color}.png`}
+                                        alt={color}
+                                    />
+                                </span>
+                            </li>
+                        ))}
                     </ul>
                     <div id="hideSwitcher" onClick={toggleSwitch}>×</div>
                 </div>
