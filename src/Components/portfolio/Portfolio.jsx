@@ -122,9 +122,11 @@ import dashboed7 from "../../assets/img/dashboed7_result.webp";
 function Portfolio() {
     const projectCategories = {
         Projects: [
-            { href: insidermenofia1, title: 'insidermenofia Project', url: 'https://insidermenofia.com/', date: ' Oct 2025  ' },
-            { href: ugec1, title: 'ugec Project', url: 'https://ugec.souqmsr.com/', date: ' Nov 2024  ' },
-            { href: jawdaconsultant1, title: 'jawdaconsultant Project', url: 'https://jawdaconsultant.com', date: ' jan 2024  ' },
+            {
+                href: insidermenofia1, title: 'insidermenofia Project', url: 'https://insidermenofia.com/', date: ' Oct 2025  ', wordpress: true
+            },
+            { href: ugec1, title: 'ugec Project', url: 'https://ugec.souqmsr.com/', date: ' Nov 2024  ', wordpress: true },
+            { href: jawdaconsultant1, title: 'jawdaconsultant Project', url: 'https://jawdaconsultant.com', date: ' jan 2024  ', wordpress: true },
             { href: alMotamizon1, title: 'al-motamizon Project', url: 'https://al-motamizon.com/ar', date: ' Dec 2023  ' },
             { href: ghulam1, title: 'ghulam Project', url: 'https://ghulam.najezsoft.com/ar', date: ' Nov 2023  ' },
             { href: noorcontrol1, title: 'noorcontrol Project', url: 'https://noorcontrol.com/', date: ' Nov 2023  ' },
@@ -298,6 +300,7 @@ function Portfolio() {
                             decoding="async"
                             className="img img-responsive"
                         />
+
                     </a>
                 </figure>
             </div>
@@ -334,7 +337,7 @@ function Portfolio() {
                                                     data-fancybox={project.title}
                                                     data-caption={project.title}
                                                     href={project.href}>
-                                                    <div className="img-holder">
+                                                    <div className="img-holder position-relative">
                                                         <img
                                                             src={project.href}
                                                             alt={project.title}
@@ -342,6 +345,13 @@ function Portfolio() {
                                                             decoding="async"
                                                             className="img img-responsive"
                                                         />
+                                                        {project.wordpress ?
+                                                            <img
+                                                                src={'src/assets/img/wordpress.png'}
+                                                                alt={'wordpressLogo'}
+                                                                title={'wordpressLogo'}
+                                                                className="p-1 img-wordpressLogo"
+                                                            /> : ''}
                                                         <span className="top"></span>
                                                         <span className="bottom"></span>
                                                         <span className="right"></span>
