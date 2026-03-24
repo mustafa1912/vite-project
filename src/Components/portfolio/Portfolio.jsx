@@ -1,11 +1,12 @@
-import React from "react";
-// Fancybox CSS and JS
+import { useState } from "react";
+
+// Fancybox
 import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 import "@fancyapps/fancybox/dist/jquery.fancybox.min.js";
 
-// Import all images as modules (this ensures they work in dev and prod)
-
-// Import all images as modules (this ensures they work in dev and prod)
+import gallery from "../../../src/assets/images/gallery.gif";
+import link from "../../../src/assets/images/link.gif";
+// ── Images ───────────────────────────────────────────────────────────────────
 import insidermenofia1 from "../../assets/img/insidermenofia1.webp";
 import insidermenofia2 from "../../assets/img/insidermenofia2.webp";
 import insidermenofia3 from "../../assets/img/insidermenofia3.webp";
@@ -118,274 +119,248 @@ import dashboed5 from "../../assets/img/dashboed5_result.webp";
 import dashboed6 from "../../assets/img/dashboed6_result.webp";
 import dashboed7 from "../../assets/img/dashboed7_result.webp";
 
+// ── Data ──────────────────────────────────────────────────────────────────────
+const FILTERS = ["All", "WordPress", "React", "PHP", "C#", "HTML"];
 
-function Portfolio() {
-    const projectCategories = {
-        Projects: [
-            {
-                href: insidermenofia1, title: 'insidermenofia Project', url: 'https://insidermenofia.com/', date: ' Oct 2025  ', wordpress: true
-            },
-            { href: ugec1, title: 'ugec Project', url: 'https://ugec.souqmsr.com/', date: ' Nov 2024  ', wordpress: true },
-            { href: jawdaconsultant1, title: 'jawdaconsultant Project', url: 'https://jawdaconsultant.com', date: ' jan 2024  ', wordpress: true },
-            { href: alMotamizon1, title: 'al-motamizon Project', url: 'https://al-motamizon.com/ar', date: ' Dec 2023  ' },
-            { href: ghulam1, title: 'ghulam Project', url: 'https://ghulam.najezsoft.com/ar', date: ' Nov 2023  ' },
-            { href: noorcontrol1, title: 'noorcontrol Project', url: 'https://noorcontrol.com/', date: ' Nov 2023  ' },
-            { href: asiaf1, title: 'asiaf Project', url: 'https://www.asiaf.com.sa/', date: ' oct 2023  ' },
-            { href: kfsHiet1, title: 'kfs-hiet Project', url: 'https://kfs-hiet.edu.eg/', date: ' Aug 2023  ' },
-            { href: citysquares1, title: 'citysquares Project', url: 'https://citysquares.com.eg/ar', date: ' jul 2023  ' },
-            { href: osqufia1, title: 'osqufia Project', url: '#', date: ' jun 2023  ' },
-            { href: whitesand1, title: 'whitesand Project', url: 'https://www.whitesand-eg.com/', date: ' Nov 2021  ' },
-            { href: us1, title: 'us Project', url: '#', date: ' may 2023  ' },
-            { href: cms, title: 'CMS Project', url: '#', date: ' Feb 2021  ' },
-            { href: hcr1, title: 'HCR Project', url: '#', date: ' Feb 2021  ' },
-            { href: naseq8, title: 'naseq Project', url: '#', date: ' Feb 2021  ' },
-            { href: thite1, title: 'thite', url: 'https://thiet.edu.eg/ar', date: ' Feb 2021  ' },
-            { href: henkleez7, title: 'henkleez Project', url: 'https://www.henkleez.com/ar', date: ' Feb 2021  ' },
-            { href: market9, title: 'market Project', url: '', date: ' Feb 2020  ' },
-            { href: dashboed7, title: 'dashboed Project', url: '#', date: ' Feb 2020  ' },
-        ],
-        dashboed: [
-            { href: 'src/assets/img/dashboed1_result.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed2_result.webp', title: 'dashboed Project' }
-        ],
-        HCR: [
-            { href: 'src/assets/img/dashboed1_result.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed2_result.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed3_result.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed4_result.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed5_result.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed6_result.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed7_result.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed8_result.webp', title: 'dashboed Project' },
-            { href: 'src/assets/img/dashboed9_result.webp', title: 'dashboed Project' }
-        ],
-        market: [
-            { href: 'src/assets/img/market1_result.webp', title: 'market Project' },
-            { href: 'src/assets/img/market2_result.webp', title: 'market Project' },
-            { href: 'src/assets/img/market3_result.webp', title: 'market Project' },
-            { href: 'src/assets/img/market4_result.webp', title: 'market Project' },
-            { href: 'src/assets/img/market5_result.webp', title: 'market Project' }
-        ],
-        osqufia: [
-            { href: 'src/assets/img/osqufia1_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia2_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia3_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia4_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia5_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia6_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia7_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia8_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia9_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia10_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia11_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia12_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia13_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia14_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia15_result.webp', title: 'osqufia Project' },
-            { href: 'src/assets/img/osqufia16_result.webp', title: 'osqufia Project' }
-        ],
-        thite: [
-            { href: 'src/assets/img/thite1_result.webp', title: 'thite' },
-            { href: 'src/assets/img/thite2_result.webp', title: 'thite' },
-            { href: 'src/assets/img/thite3_result.webp', title: 'thite' },
-            { href: 'src/assets/img/thite4_result.webp', title: 'thite' },
-            { href: 'src/assets/img/thite5_result.webp', title: 'thite' },
-            { href: 'src/assets/img/thite6_result.webp', title: 'thite' }
-        ],
-        us: [
-            { href: 'src/assets/img/us1_result.webp', title: 'us Project' },
-            { href: 'src/assets/img/us2_result.webp', title: 'us Project' },
-            { href: 'src/assets/img/us3_result.webp', title: 'us Project' },
-            { href: 'src/assets/img/us4_result.webp', title: 'us Project' },
-            { href: 'src/assets/img/us5_result.webp', title: 'us Project' },
-            { href: 'src/assets/img/us6_result.webp', title: 'us Project' },
-            { href: 'src/assets/img/us7_result.webp', title: 'us Project' },
-            { href: 'src/assets/img/us8_result.webp', title: 'us Project' },
-            { href: 'src/assets/img/us9_result.webp', title: 'us Project' }
-        ],
-        al_motamizon: [
-            { href: 'src/assets/img/al-motamizon7_result.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon6_result.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon5_result.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon4_result.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon3_result.webp', title: 'al-motamizon Project' },
-            { href: 'src/assets/img/al-motamizon2_result.webp', title: 'al-motamizon Project' },
-        ],
-        jawdaconsultant: [
-            { href: 'src/assets/img/jawdaconsultant4_result.webp', title: 'jawdaconsultant Project' },
-            { href: 'src/assets/img/jawdaconsultant3_result.webp', title: 'jawdaconsultant Project' },
-            { href: 'src/assets/img/jawdaconsultant2_result.webp', title: 'jawdaconsultant Project' },
-            { href: 'src/assets/img/jawdaconsultant1_result.webp', title: 'jawdaconsultant Project' },
-        ],
-        insidermenofia: [
-            { href: 'src/assets/img/insidermenofia2.webp', title: 'insidermenofia Project' },
-            { href: 'src/assets/img/insidermenofia3.webp', title: 'insidermenofia Project' },
-            { href: 'src/assets/img/insidermenofia4.webp', title: 'insidermenofia Project' },
-            { href: 'src/assets/img/insidermenofia5.webp', title: 'insidermenofia Project' },
-            { href: 'src/assets/img/insidermenofia6.webp', title: 'insidermenofia Project' },
-            { href: 'src/assets/img/insidermenofia7.webp', title: 'insidermenofia Project' },
-        ],
-        ugec: [
-            { href: 'src/assets/img/ugec4_result.webp', title: 'ugec Project' },
-            { href: 'src/assets/img/ugec3_result.webp', title: 'ugec Project' },
-            { href: 'src/assets/img/ugec2_result.webp', title: 'ugec Project' },
-            { href: 'src/assets/img/ugec1_result.webp', title: 'ugec Project' },
-        ],
-        noorcontrol: [
-            { href: 'src/assets/img/noorcontrol7_result.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol6_result.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol5_result.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol4_result.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol3_result.webp', title: 'noorcontrol Project' },
-            { href: 'src/assets/img/noorcontrol2_result.webp', title: 'noorcontrol Project' },
-        ],
-        asiaf: [
-            { href: 'src/assets/img/asiaf5_result.webp', title: 'asiaf Project' },
-            { href: 'src/assets/img/asiaf4_result.webp', title: 'asiaf Project' },
-            { href: 'src/assets/img/asiaf3_result.webp', title: 'asiaf Project' },
-            { href: 'src/assets/img/asiaf2_result.webp', title: 'asiaf Project' },
-        ],
-        citysquares: [
-            { href: 'src/assets/img/citysquares7_result.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares6_result.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares5_result.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares4_result.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares3_result.webp', title: 'citysquares Project' },
-            { href: 'src/assets/img/citysquares2_result.webp', title: 'citysquares Project' },
-        ],
-        ghulam: [
-            { href: 'src/assets/img/ghulam1_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam2_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam3_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam4_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam5_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam6_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam7_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam8_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/ghulam9_result.webp', title: 'ghulam Project', date: ' Nov 2023  ' },
-        ],
-        kfs_hiet: [
-            { href: 'src/assets/img/kfs-hiet1_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet2_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet3_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet4_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet5_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet6_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet7_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet8_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet9_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/kfs-hiet10_result.webp', title: 'kfs-hiet Project', date: ' Nov 2023  ' },
-        ],
-        whitesand: [
-            { href: 'src/assets/img/whitesand1_result.webp', title: 'whitesand Project' },
-            { href: 'src/assets/img/whitesand2_result.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/whitesand3_result.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/whitesand4_result.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
-            { href: 'src/assets/img/whitesand5_result.webp', title: 'whitesand Project', date: ' Nov 2023  ' },
-        ],
+const PROJECTS = [
+    {
+        id: 1, number: "01", title: "insidermenofia Project",
+        cover: insidermenofia1, url: "https://insidermenofia.com/",
+        date: "Oct 2025", wordpress: true, filter: "WordPress",
+        tags: "WordPress · SEO · Cloudflare CDN",
+        gallery: [insidermenofia2, insidermenofia3, insidermenofia4, insidermenofia5, insidermenofia6, insidermenofia7],
+    },
+    {
+        id: 2, number: "02", title: "ugec Project",
+        cover: ugec1, url: "https://ugec.souqmsr.com/",
+        date: "Nov 2024", wordpress: true, filter: "WordPress",
+        tags: "WordPress · Elementor · ACF",
+        gallery: [ugec2, ugec3, ugec4],
+    },
+    {
+        id: 3, number: "03", title: "jawdaconsultant Project",
+        cover: jawdaconsultant1, url: "https://jawdaconsultant.com",
+        date: "Jan 2024", wordpress: true, filter: "WordPress",
+        tags: "WordPress · Elementor",
+        gallery: [jawdaconsultant3, jawdaconsultant4],
+    },
+    {
+        id: 4, number: "04", title: "al-motamizon Project",
+        cover: alMotamizon1, url: "https://al-motamizon.com/ar",
+        date: "Dec 2023", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [alMotamizon2, alMotamizon3, alMotamizon4, alMotamizon5, alMotamizon6, alMotamizon7],
+    },
+    {
+        id: 5, number: "05", title: "ghulam Project",
+        cover: ghulam1, url: "https://ghulam.najezsoft.com/ar",
+        date: "Nov 2023", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [ghulam2, ghulam3, ghulam4, ghulam5, ghulam6, ghulam7, ghulam9],
+    },
+    {
+        id: 6, number: "06", title: "noorcontrol Project",
+        cover: noorcontrol1, url: "https://noorcontrol.com/",
+        date: "Nov 2023", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [noorcontrol2, noorcontrol3, noorcontrol4, noorcontrol5, noorcontrol6, noorcontrol7],
+    },
+    {
+        id: 7, number: "07", title: "asiaf Project",
+        cover: asiaf1, url: "https://www.asiaf.com.sa/",
+        date: "Oct 2023", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [asiaf2, asiaf3, asiaf4, asiaf5],
+    },
+    {
+        id: 8, number: "08", title: "kfs-hiet Project",
+        cover: kfsHiet1, url: "https://kfs-hiet.edu.eg/",
+        date: "Aug 2023", wordpress: false, filter: "React",
+        tags: "React · Custom Development",
+        gallery: [kfsHiet2, kfsHiet3, kfsHiet4, kfsHiet5, kfsHiet6, kfsHiet7, kfsHiet8, kfsHiet9, kfsHiet10],
+    },
+    {
+        id: 9, number: "09", title: "citysquares Project",
+        cover: citysquares1, url: "#",
+        date: "Jul 2023", wordpress: false, filter: "WordPress",
+        tags: "WordPress · Elementor · ACF",
+        gallery: [citysquares2, citysquares3, citysquares4, citysquares5, citysquares6, citysquares7],
+    },
+    {
+        id: 10, number: "10", title: "osqufia Project",
+        cover: osqufia1, url: "#",
+        date: "Jun 2023", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [osqufia2, osqufia3, osqufia4, osqufia5, osqufia6, osqufia7, osqufia8, osqufia9, osqufia10, osqufia11, osqufia12, osqufia13, osqufia14, osqufia15, osqufia16],
+    },
+    {
+        id: 11, number: "11", title: "whitesand Project",
+        cover: whitesand1, url: "https://www.whitesand-eg.com/",
+        date: "Nov 2021", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [whitesand2, whitesand3, whitesand4, whitesand5],
+    },
+    {
+        id: 12, number: "12", title: "us Project",
+        cover: us1, url: "#",
+        date: "May 2023", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [us2, us3, us4, us5, us6, us7, us8, us9],
+    },
+    {
+        id: 13, number: "13", title: "CMS Project",
+        cover: cms, url: "#",
+        date: "Feb 2021", wordpress: false, filter: "React",
+        tags: "React · Custom CMS",
+        gallery: [],
+    },
+    {
+        id: 14, number: "14", title: "HCR Project",
+        cover: hcr1, url: "#",
+        date: "Feb 2021", wordpress: false, filter: "C#",
+        tags: "C# · Javascript · HTML . css",
+        gallery: [],
+    },
+    {
+        id: 15, number: "15", title: "naseq Project",
+        cover: naseq8, url: "#",
+        date: "Feb 2021", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [],
+    },
+    {
+        id: 16, number: "16", title: "thite Project",
+        cover: thite1, url: "https://thiet.edu.eg/ar",
+        date: "Feb 2021", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [thite2, thite3, thite4, thite5, thite6],
+    },
+    {
+        id: 17, number: "17", title: "henkleez Project",
+        cover: henkleez7, url: "https://www.henkleez.com/ar",
+        date: "Feb 2021", wordpress: false, filter: "PHP",
+        tags: "PHP · Javascript · HTML",
+        gallery: [],
+    },
+    {
+        id: 18, number: "18", title: "market Project",
+        cover: market9, url: "#",
+        date: "Feb 2020", wordpress: false, filter: "HTML",
+        tags: "HTML · E-Commerce",
+        gallery: [market1, market2, market3, market4, market5],
+    },
+    {
+        id: 19, number: "19", title: "dashboed Project",
+        cover: dashboed7, url: "#",
+        date: "Feb 2020", wordpress: false, filter: "HTML",
+        tags: "HTML · Dashboard",
+        gallery: [dashboed1, dashboed2, dashboed3, dashboed4, dashboed5, dashboed6],
+    },
+];
 
-    };
 
-    // The rest of your component remains the same
-    // Reusable render function for project grids
-    const renderGrid = (category) =>
-        projectCategories[category].map((item, index) => (
-            <div className="d-none" key={`${category}-${index}`}>
-                <figure>
-                    <a data-fancybox={item.title} data-caption={item.title} href={item.href}>
-                        <img
-                            src={item.href}
-                            alt={item.title}
-                            title={item.title}
-                            decoding="async"
-                            className="img img-responsive"
-                        />
+// ── Component ─────────────────────────────────────────────────────────────────
+export default function Portfolio() {
+    const [activeFilter, setActiveFilter] = useState("All");
 
-                    </a>
-                </figure>
-            </div>
-        ));
+    const filtered =
+        activeFilter === "All"
+            ? PROJECTS
+            : PROJECTS.filter((p) => p.filter === activeFilter);
 
     return (
-        <React.Fragment>
-            <title>Portfolio | Mostafa Wahba </title>
+        <>
+            <title>Portfolio | Mostafa Wahba</title>
 
-            <section className="portfolio at-top">
-                <div id="preloader" className="preloader off">
-                    <div className="black_wall"></div>
-                    <div className="loader"></div>
+            <section className="pf-section">
+
+                {/* Header */}
+                <section
+                    className="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1 no-transform revealator-within">
+                    <h1>  MY <span>PORTFOLIO</span> </h1>
+                    <span className="title-bg"> WORK    </span>
+                </section>
+
+                {/* Filters */}
+                <div className="pf-filter-bar align-items-center justify-content-center">
+                    {FILTERS.map((f) => (
+                        <button
+                            key={f}
+                            className={`pf-filter-btn ${activeFilter === f ? "active" : ""}`}
+                            onClick={() => setActiveFilter(f)}
+                        >
+                            {f}
+                        </button>
+                    ))}
                 </div>
 
-                {/* Page Title */}
-                <section className="title-section text-left text-sm-center">
-                    <h1>
-                        my <span>portfolio</span>
-                    </h1>
-                    <span className="title-bg">works</span>
-                </section>
+                {/* Grid */}
+                <div className="pf-grid">
+                    {filtered.map((project) => (
+                        <div key={project.id} className="pf-card rounded">
 
-                {/* Main Content */}
-                <section className="main-content text-center">
-                    <div id="grid-gallery" className="container grid-gallery">
-                        <section className="grid-wrap">
-                            <ul className="row">
-                                {projectCategories.Projects.map((project, index) => (
-                                    <li className="col-sm-4 mb-2" key={`project-${index}`}>
-                                        <figure>
-                                            <div className="position-relative mb-2">
-                                                <a
-                                                    data-fancybox={project.title}
-                                                    data-caption={project.title}
-                                                    href={project.href}>
-                                                    <div className="img-holder position-relative">
-                                                        <img
-                                                            src={project.href}
-                                                            alt={project.title}
-                                                            title={project.title}
-                                                            decoding="async"
-                                                            className="img img-responsive"
-                                                        />
-                                                        {project.wordpress ?
-                                                            <img
-                                                                src={'src/assets/img/wordpress.png'}
-                                                                alt={'wordpressLogo'}
-                                                                title={'wordpressLogo'}
-                                                                className="p-1 img-wordpressLogo"
-                                                            /> : ''}
-                                                        <span className="top"></span>
-                                                        <span className="bottom"></span>
-                                                        <span className="right"></span>
-                                                        <span className="left"></span>
-                                                    </div>
-                                                    <div className="Project-title pt-2 pb-1">
-                                                        <span>{project.title}</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div className="text-center">
-                                                <a
-                                                    href={project.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="button mb-2 rounded-lg w-100" >
-                                                    <span className="button-text rounded">Visit Site</span>
-                                                </a>
-                                            </div>
-                                        </figure>
-                                    </li>
-                                ))}
-                            </ul>
-                        </section>
+                            <div className="pf-accent-line" />
+                            <div className="pf-card-number">{project.number}</div>
+                            <img className="pf-card-img" src={project.cover} alt={project.title} />
+                            <div className="pf-overlay" />
+
+                            {/* Default bottom info */}
+                            <div className="pf-card-info">
+                                <div className="pf-card-date">{project.date}</div>
+                                <div className="pf-card-name">{project.title}</div>
+                            </div>
+
+                            {/* Hover overlay */}
+                            <div className="pf-hover-overlay">
+                                <div className="pf-hover-tag">{project.tags}</div>
+                                <div className="pf-hover-title">{project.title.toUpperCase()}</div>
+                                <div className="pf-hover-date">{project.date}</div>
+                                <div className="pf-btn-row">
+                                    <a
+                                        data-fancybox={project.title}
+                                        data-caption={project.title}
+                                        href={project.cover}
+                                        className="pf-gallery-btn p-2 rounded"
+                                    >
+                                        <img src={gallery} alt={'gallery'} className="img-link" ></img>
+                                    </a>
+
+                                    {project.url && project.url !== "#" && (
+                                        <a
+                                            href={project.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="pf-visit-btn p-2 rounded"
+                                        >
+                                            <img src={link} alt={'link'} className="img-link"></img>
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+
+                            {/* Hidden gallery images for Fancybox */}
+                            {project.gallery.map((img, i) => (
+                                <a
+                                    key={i}
+                                    className="pf-hidden-gallery"
+                                    data-fancybox={project.title}
+                                    data-caption={`${project.title} — ${i + 2}`}
+                                    href={img}
+                                />
+                            ))}
+
+                        </div>
+                    ))}
+                </div>
+
+                {/* Footer */}
+                <div className="pf-footer">
+                    <div className="pf-count">
+                        Showing <span>{filtered.length}</span> of {PROJECTS.length} projects
                     </div>
-                </section>
+                </div>
 
-                {/* Hidden Grids */}
-                {Object.keys(projectCategories).map((category) =>
-                    category !== "Projects" ? renderGrid(category) : null
-                )}
             </section>
-        </React.Fragment>
+        </>
     );
 }
-
-export default Portfolio;

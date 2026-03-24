@@ -262,7 +262,7 @@ function Resume() {
                                         <p className="open-sans-font"> Learn HTML, CSS and Wordpress. You will be able to start translating ideas into compelling websites.
                                         </p>
                                         <div className='text-right'>
-                                            <a href='https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/a5f21015-c617-4145-8bba-607be81aff78.pdf' target='_blank' rel="noopener noreferrer" className="button mt-3" >
+                                            <a href='https://drive.google.com/file/d/11wHZ21qIkgeIOiSo_FV5gLfWaNgbqULR/view?usp=drive_link' target='_blank' rel="noopener noreferrer" className="button mt-3" >
                                                 <span className="button-text">  certificate </span>
                                                 <span className="button-icon fas fa-images"></span>
                                             </a>
@@ -279,7 +279,7 @@ function Resume() {
                                         <p className="open-sans-font">Learn JavaScript basics from the very beginning. You will increase your knowledge in Front End Web Development gradually and you will create some interesting projects by the end of this program.
                                         </p>
                                         <div className='text-right'>
-                                            <a href='https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/6729f924-b318-400b-9f2e-68e241e82ced.pdf' target='_blank' rel="noopener noreferrer" className="button mt-3" >
+                                            <a href='https://drive.google.com/file/d/1mssGMKomiRFzE5XzSywFOgaBbq97j-pU/view?usp=drive_link' target='_blank' rel="noopener noreferrer" className="button mt-3" >
                                                 <span className="button-text">  certificate </span>
                                                 <span className="button-icon fas fa-images"></span>
                                             </a>
@@ -294,7 +294,7 @@ function Resume() {
                                             className="place open-sans-font">maharatech</span></h5>
                                         <p className="open-sans-font">The JavaScript Course by maharatech is a comprehensive program designed to teach the essential concepts of JavaScript, the most popular programming language for web development. This course takes students from the basics of JavaScript to more advanced topics, enabling them to create dynamic, interactive websites and applications.</p>
                                         <div className='text-right'>
-                                            <a href='https://maharatech.gov.eg/mod/customcert/view.php?id=7660&downloadown=1' target='_blank' rel="noopener noreferrer" className="button mt-3" >
+                                            <a href='https://drive.google.com/file/d/1IllikQFLKryBLU1saBMqiP9zN9rDPJk3/view?usp=drive_link' target='_blank' rel="noopener noreferrer" className="button mt-3" >
                                                 <span className="button-text">  certificate </span>
                                                 <span className="button-icon fas fa-images"></span>
                                             </a>
@@ -309,15 +309,49 @@ function Resume() {
                                             className="place open-sans-font">maharatech</span></h5>
                                         <p className="open-sans-font">The React JS Course by maharatech is designed to teach developers how to build fast, scalable, and modern web applications using React, one of the most powerful JavaScript libraries. This course provides a deep dive into the fundamentals of React and covers everything you need to create dynamic user interfaces and single-page applications (SPAs).</p>
                                         <div className='text-right'>
-                                            <a href='https://maharatech.gov.eg/mod/customcert/view.php?id=7660&downloadown=1' target='_blank' rel="noopener noreferrer" className="button mt-3" >
+                                            <a href='https://drive.google.com/file/d/1NMyXoeObIqROkRpw7NtXyHRwPiVQWSTy/view?usp=sharing' target='_blank' rel="noopener noreferrer" className="button mt-3" >
                                                 <span className="button-text">  certificate </span>
                                                 <span className="button-icon fas fa-images"></span>
                                             </a>
                                         </div>
                                     </li>
+
+                                    {/* ✅ NEW - Modern JavaScript: ES6 and beyond */}
+                                    <li className='col-12 col-md-6'>
+                                        <div className="icon">
+                                            <i className="fa fa-briefcase"></i>
+                                        </div>
+                                        <span className="time open-sans-font text-uppercase">2026 - March</span>
+                                        <h5 className="poppins-font text-uppercase">Modern JavaScript: ES6 and beyond <span
+                                            className="place open-sans-font">maharatech</span></h5>
+                                        <p className="open-sans-font">A course covering modern JavaScript features introduced in ES6 and later versions, including arrow functions, destructuring, modules, promises, async/await, and other advanced concepts that power modern web development.</p>
+                                        <div className='text-right'>
+                                            <a href='https://drive.google.com/file/d/1AybJLjU-OedLxZCCd5HQ8ux0qQp8dTzk/view?usp=drive_link' target='_blank' rel="noopener noreferrer" className="button mt-3" >
+                                                <span className="button-text">  certificate </span>
+                                                <span className="button-icon fas fa-images"></span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    {/* ✅ NEW - UX Design Fundamentals */}
+                                    <li className='col-12 col-md-6'>
+                                        <div className="icon">
+                                            <i className="fa fa-briefcase"></i>
+                                        </div>
+                                        <span className="time open-sans-font text-uppercase">2026 - March</span>
+                                        <h5 className="poppins-font text-uppercase">UX Design Fundamentals <span
+                                            className="place open-sans-font">maharatech</span></h5>
+                                        <p className="open-sans-font">A foundational course in UX Design covering core principles of user experience design, including user research, wireframing, prototyping, usability testing, and designing intuitive digital products that meet user needs.</p>
+                                        <div className='text-right'>
+                                            <a href='https://drive.google.com/file/d/1hVBaE8zNXdZW_0m4MTuYySTGYvkCTIkF/view?usp=drive_link' target='_blank' rel="noopener noreferrer" className="button mt-3" >
+                                                <span className="button-text">  certificate </span>
+                                                <span className="button-icon fas fa-images"></span>
+                                            </a>
+                                        </div>
+                                    </li>
+
                                 </ul>
                             </div>
-
                         </div>
                         {/*<!-- Experience & Education Ends --> */}
                     </div>
