@@ -1203,6 +1203,7 @@ body.light hr.separator {
   left: 0;
   top: 10px;
   font-size: 33px;
+  color: var(--yellow);
 }
 
 .contact .custom-span-contact i.fa-phone-square {
@@ -2313,5 +2314,4 @@ body.light.contact ul.social li a:hover {
   .pf-grid {
     grid-template-columns: 1fr;
   }
-  
 }

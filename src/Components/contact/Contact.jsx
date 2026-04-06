@@ -1,7 +1,32 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { Toaster, toast } from 'react-hot-toast'
 
 function Contact() {
 
+    const form = useRef()
+    const [loading, setLoading] = useState(false)
+
+    const sendEmail = (e) => {
+        e.preventDefault()
+        setLoading(true)
+
+        emailjs.sendForm(
+            "service_gtk5epn",
+            "template_i97xxwh",
+            form.current,
+            "Vzj89bsJsqqJOi3PU"
+        )
+            .then(() => {
+                toast.success("Message sent successfully 🚀")
+                setLoading(false)
+                form.current.reset()
+            })
+            .catch(() => {
+                toast.error("Failed to send ❌ Try again")
+                setLoading(false)
+            })
+    }
 
     return (
         <React.Fragment>
@@ -46,28 +71,26 @@ function Contact() {
                             {/* <!-- Left Side Ends -->*/}
                             {/* <!-- Contact Form Starts -->*/}
                             <div className="col-12 col-lg-8">
-                                <form className="contactform" method="post" action=''>
-                                    <div className="contactform">
-                                        <div className="row">
-                                            <div className="col-12 col-md-4">
-                                                <input type="text" name="name" placeholder="YOUR NAME" />
-                                            </div>
-                                            <div className="col-12 col-md-4">
-                                                <input type="email" name="email" placeholder="YOUR EMAIL" />
-                                            </div>
-                                            <div className="col-12 col-md-4">
-                                                <input type="text" name="subject" placeholder="YOUR SUBJECT" />
-                                            </div>
-                                            <div className="col-12">
-                                                <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
-                                                <button type="submit" className="button">
-                                                    <span className="button-text">Send Message</span>
-                                                    <span className="button-icon fa fa-send"><i className="fa-solid fa-paper-plane"></i></span>
-                                                </button>
-                                            </div>
-                                            <div className="col-12 form-message">
-                                                <span className="output_message text-center font-weight-600 text-uppercase"></span>
-                                            </div>
+                                <form ref={form} onSubmit={sendEmail} className="contactform">
+                                    <div className="row">
+
+                                        <div className="col-12 col-md-4">
+                                            <input type="text" name="name" placeholder="YOUR NAME" required />
+                                        </div>
+                                        <div className="col-12 col-md-4">
+                                            <input type="email" name="email" placeholder="YOUR EMAIL" required />
+                                        </div>
+                                        <div className="col-12 col-md-4">
+                                            <input type="text" name="subject" placeholder="YOUR SUBJECT" />
+                                        </div>
+                                        <div className="col-12">
+                                            <textarea name="message" placeholder="YOUR MESSAGE" required></textarea>
+                                            <button type="submit" className="button" disabled={loading}>
+                                                <span className="button-text">
+                                                    {loading ? "Sending..." : "Send Message"}
+                                                </span>
+                                                <span className="button-icon fa fa-send"><i className="fa-solid fa-paper-plane"></i></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </form>
@@ -75,7 +98,7 @@ function Contact() {
                             {/* <!-- Contact Form Ends -->*/}
                         </div>
                     </div>
-
+                    <Toaster position="top-left" reverseOrder={false} />
                 </section>
             </section>
         </React.Fragment>
