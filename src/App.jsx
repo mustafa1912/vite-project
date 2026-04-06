@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 // style 
+import './assets/style/css/yellow.css';
 import './assets/style/css/style.css';
 
 import Switcher from './Components/switch/Switcher';
