@@ -2199,7 +2199,7 @@ body.light.contact ul.social li a:hover {
 
 .pf-btn-row {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-top: 4px;
 }
 .img-link {
@@ -2221,6 +2221,7 @@ body.light.contact ul.social li a:hover {
   text-decoration: none;
   border: none;
   cursor: pointer;
+  z-index: 100;
   transition:
     background 0.2s,
     transform 0.2s,
@@ -2312,7 +2313,5 @@ body.light.contact ul.social li a:hover {
   .pf-grid {
     grid-template-columns: 1fr;
   }
-  .pf-btn-row {
-    flex-direction: column;
-  }
+  
 }

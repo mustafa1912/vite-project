@@ -37,7 +37,7 @@ function Contact() {
                                 <ul className="social list-unstyled pt-1 mb-5">
                                     <li className="facebook"><a title="Facebook" href="https://www.facebook.com/mostafaw338/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook-f"></i></a>
                                     </li>
-                                    <li className="twitter"><a title="linkedin" href="https://www.linkedin.com/in/mostafa-wahba-64bbab1a4/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i></a>
+                                    <li className="twitter"><a title="linkedin" href="https://www.linkedin.com/in/mostafa-w-64bbab1a4/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i></a>
                                     </li>
                                     <li className="youtube"><a title="github" href="https://github.com/mustafa1912" target="_blank" rel="noreferrer"  ><i className="fa-brands fa-github"></i></a>
                                     </li>

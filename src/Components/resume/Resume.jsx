@@ -1,8 +1,46 @@
-import React from 'react'
+import React, { useEffect, useRef } from "react";
+
 // import img
 import profileImg from "../../assets/img/me/H22C1262.webp";
 
 function Resume() {
+    const cardsRef = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+
+        cardsRef.current.forEach((card) => {
+            if (card) observer.observe(card);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    const skills = [
+        { label: "HTML 5", abbr: "HTML5", tag: "Markup", color: "#f0a500", bg: "#1a1200", border: "#3a2a00" },
+        { label: "CSS 3", abbr: "CSS3", tag: "Styling", color: "#38bdf8", bg: "#001220", border: "#003050" },
+        { label: "JavaScript", abbr: "JS", tag: "Language", color: "#facc15", bg: "#1a1500", border: "#3a3000" },
+        { label: "React", abbr: "TSX", tag: "Framework", color: "#a78bfa", bg: "#0d0025", border: "#2a1060" },
+        { label: "Tailwind CSS", abbr: "TW", tag: "Styling", color: "#34d399", bg: "#001a15", border: "#00402e" },
+        { label: "SCSS", abbr: "SCSS", tag: "Styling", color: "#f472b6", bg: "#1a0010", border: "#400030" },
+        { label: "Bootstrap", abbr: "BS", tag: "UI Kit", color: "#60a5fa", bg: "#001a28", border: "#003050" },
+        { label: "WordPress", abbr: "WP", tag: "CMS", color: "#4ade80", bg: "#002010", border: "#005025" },
+        { label: "Elementor", abbr: "EL", tag: "Builder", color: "#fb923c", bg: "#1a0800", border: "#401800" },
+        { label: "ACF", abbr: "ACF", tag: "WP Plugin", color: "#f0a500", bg: "#1a1200", border: "#3a2a00" },
+        { label: "Git", abbr: "GIT", tag: "Version Control", color: "#c084fc", bg: "#100015", border: "#300040" },
+        { label: "SEO", abbr: "SEO", tag: "Marketing", color: "#22d3ee", bg: "#001a28", border: "#003a50" },
+    ];
+
+
 
     return (
         <React.Fragment>
@@ -143,103 +181,29 @@ function Resume() {
                                 <h3
                                     className="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">
                                     My Skills</h3>
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span> html</span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
+                            </div> 
+                            <div className="skills-grid my-4">
+                                {skills.map((skill, i) => (
+                                    <div
+                                        key={skill.label}
+                                        className="skill-card"
+                                        ref={(el) => (cardsRef.current[i] = el)}
+                                        style={{ animationDelay: `${i * 0.06}s` }}
+                                    >
+                                        <div
+                                            className="skill-icon"
+                                            style={{
+                                                color: skill.color,
+                                                background: skill.bg,
+                                                border: `1.5px solid ${skill.border}`,
+                                            }}
+                                        >
+                                            {skill.abbr}
+                                        </div>
+                                        <span className="skill-name">{skill.label}</span>
+                                        <span className="skill-tag">{skill.tag}</span>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span>css</span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span>js</span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span> bootstrap</span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span> taliwan </span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span> scss </span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span>react </span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span> wordpress </span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span> elementor </span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div className="col-6 col-md-3 mb-3 mb-sm-5">
-                                <div className="c100 p100">
-                                    <span> SEO </span>
-                                    <div className="slice">
-                                        <div className="bar"></div>
-                                        <div className="fill"></div>
-                                    </div>
-                                </div>
-
+                                ))}
                             </div>
                         </div>
                         {/*<!-- Skills Ends --> */}
