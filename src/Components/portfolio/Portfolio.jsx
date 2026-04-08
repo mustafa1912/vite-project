@@ -146,7 +146,7 @@ const PROJECTS = [
         cover: issgroups1, url: "https://issgroups.com/",
         date: "mar 2026", wordpress: true, filter: "React",
         tags: "React js",
-        gallery: [issgroups1, issgroups2, issgroups3, issgroups4, issgroups5وissgroups6, issgroups7, issgroups8, issgroups9, issgroups10],
+        gallery: [issgroups1, issgroups2, issgroups3, issgroups4, issgroups5 , issgroups6, issgroups7, issgroups8, issgroups9, issgroups10],
     },
     {
         id: 2, number: "02", title: "chitotech Project",
