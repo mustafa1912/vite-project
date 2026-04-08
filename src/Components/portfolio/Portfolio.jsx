@@ -144,22 +144,22 @@ const PROJECTS = [
     {
         id: 1, number: "01", title: "issgroups Project",
         cover: issgroups1, url: "https://issgroups.com/",
-        date: "mar 2026", wordpress: true, filter: "React",
-        tags: "React js",
-        gallery: [issgroups1, issgroups2, issgroups3, issgroups4, issgroups5 , issgroups6, issgroups7, issgroups8, issgroups9, issgroups10],
+        date: "mar 2026", wordpress: true, filter: "WordPress",
+        tags: "WordPress · SEO · Cloudflare CDN",
+        gallery: [issgroups1, issgroups2, issgroups3, issgroups4, issgroups5, issgroups6, issgroups7, issgroups8, issgroups9, issgroups10],
     },
     {
         id: 2, number: "02", title: "chitotech Project",
         cover: chitotech1, url: "https://chitotech-egypt.com/",
-        date: "Jan 2026", wordpress: true, filter: "React",
-        tags: "React js",
+        date: "Jan 2026", wordpress: true, filter: "WordPress",
+        tags: "WordPress · SEO · Cloudflare CDN",
         gallery: [chitotech1, chitotech2, chitotech3, chitotech4, chitotech5],
     },
     {
         id: 3, number: "03", title: "KanbanBoard Project",
         cover: KanbanBoard1, url: "#",
         date: "Oct 2025", wordpress: true, filter: "React",
-        tags: "React js",
+        tags: "React ",
         gallery: [KanbanBoard1, KanbanBoard2, KanbanBoard3],
     },
     {
