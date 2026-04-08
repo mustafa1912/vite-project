@@ -7,6 +7,16 @@ import "@fancyapps/fancybox/dist/jquery.fancybox.min.js";
 import gallery from "../../../src/assets/images/gallery.gif";
 import link from "../../../src/assets/images/link.gif";
 // ── Images ───────────────────────────────────────────────────────────────────
+import issgroups1 from "../../assets/img/issgroups1.webp";
+import issgroups2 from "../../assets/img/issgroups2.webp";
+import issgroups3 from "../../assets/img/issgroups3.webp";
+import issgroups4 from "../../assets/img/issgroups4.webp";
+import issgroups5 from "../../assets/img/issgroups5.webp";
+import issgroups6 from "../../assets/img/issgroups6.webp";
+import issgroups7 from "../../assets/img/issgroups7.webp";
+import issgroups8 from "../../assets/img/issgroups8.webp";
+import issgroups9 from "../../assets/img/issgroups9.webp";
+import issgroups10 from "../../assets/img/issgroups10.webp";
 import chitotech1 from "../../assets/img/chitotech1.webp";
 import chitotech2 from "../../assets/img/chitotech2.webp";
 import chitotech3 from "../../assets/img/chitotech3.webp";
@@ -132,147 +142,154 @@ const FILTERS = ["All", "WordPress", "React", "PHP", "C#", "HTML"];
 
 const PROJECTS = [
     {
-        id: 1, number: "01", title: "chitotech Project",
+        id: 1, number: "01", title: "issgroups Project",
+        cover: issgroups1, url: "https://issgroups.com/",
+        date: "mar 2026", wordpress: true, filter: "React",
+        tags: "React js",
+        gallery: [issgroups1, issgroups2, issgroups3, issgroups4, issgroups5وissgroups6, issgroups7, issgroups8, issgroups9, issgroups10],
+    },
+    {
+        id: 2, number: "02", title: "chitotech Project",
         cover: chitotech1, url: "https://chitotech-egypt.com/",
         date: "Jan 2026", wordpress: true, filter: "React",
         tags: "React js",
         gallery: [chitotech1, chitotech2, chitotech3, chitotech4, chitotech5],
     },
     {
-        id: 1, number: "02", title: "KanbanBoard Project",
+        id: 3, number: "03", title: "KanbanBoard Project",
         cover: KanbanBoard1, url: "#",
         date: "Oct 2025", wordpress: true, filter: "React",
         tags: "React js",
         gallery: [KanbanBoard1, KanbanBoard2, KanbanBoard3],
     },
     {
-        id: 2, number: "03", title: "insidermenofia Project",
+        id: 4, number: "04", title: "insidermenofia Project",
         cover: insidermenofia1, url: "https://insidermenofia.com/",
         date: "Oct 2025", wordpress: true, filter: "WordPress",
         tags: "WordPress · SEO · Cloudflare CDN",
         gallery: [insidermenofia2, insidermenofia3, insidermenofia4, insidermenofia5, insidermenofia6, insidermenofia7],
     },
     {
-        id: 3, number: "04", title: "ugec Project",
+        id: 5, number: "05", title: "ugec Project",
         cover: ugec1, url: "https://ugec.souqmsr.com/",
         date: "Nov 2024", wordpress: true, filter: "WordPress",
         tags: "WordPress · Elementor · ACF",
         gallery: [ugec2, ugec3, ugec4],
     },
     {
-        id: 4, number: "05", title: "jawdaconsultant Project",
+        id: 6, number: "06", title: "jawdaconsultant Project",
         cover: jawdaconsultant1, url: "https://jawdaconsultant.com",
         date: "Jan 2024", wordpress: true, filter: "WordPress",
         tags: "WordPress · Elementor",
         gallery: [jawdaconsultant3, jawdaconsultant4],
     },
     {
-        id: 5, number: "06", title: "al-motamizon Project",
+        id: 7, number: "07", title: "al-motamizon Project",
         cover: alMotamizon1, url: "https://al-motamizon.com/ar",
         date: "Dec 2023", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [alMotamizon2, alMotamizon3, alMotamizon4, alMotamizon5, alMotamizon6, alMotamizon7],
     },
     {
-        id: 6, number: "07", title: "ghulam Project",
+        id: 8, number: "08", title: "ghulam Project",
         cover: ghulam1, url: "https://ghulam.najezsoft.com/ar",
         date: "Nov 2023", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [ghulam2, ghulam3, ghulam4, ghulam5, ghulam6, ghulam7, ghulam9],
     },
     {
-        id: 7, number: "08", title: "noorcontrol Project",
+        id: 9, number: "09", title: "noorcontrol Project",
         cover: noorcontrol1, url: "https://noorcontrol.com/",
         date: "Nov 2023", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [noorcontrol2, noorcontrol3, noorcontrol4, noorcontrol5, noorcontrol6, noorcontrol7],
     },
     {
-        id: 8, number: "09", title: "asiaf Project",
+        id: 10, number: "10", title: "asiaf Project",
         cover: asiaf1, url: "https://www.asiaf.com.sa/",
         date: "Oct 2023", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [asiaf2, asiaf3, asiaf4, asiaf5],
     },
     {
-        id: 9, number: "10", title: "kfs-hiet Project",
+        id: 11, number: "11", title: "kfs-hiet Project",
         cover: kfsHiet1, url: "https://kfs-hiet.edu.eg/",
         date: "Aug 2023", wordpress: false, filter: "React",
         tags: "React · Custom Development",
         gallery: [kfsHiet2, kfsHiet3, kfsHiet4, kfsHiet5, kfsHiet6, kfsHiet7, kfsHiet8, kfsHiet9, kfsHiet10],
     },
     {
-        id: 10, number: "11", title: "citysquares Project",
+        id: 12, number: "12", title: "citysquares Project",
         cover: citysquares1, url: "#",
         date: "Jul 2023", wordpress: false, filter: "WordPress",
         tags: "WordPress · Elementor · ACF",
         gallery: [citysquares2, citysquares3, citysquares4, citysquares5, citysquares6, citysquares7],
     },
     {
-        id: 11, number: "12", title: "osqufia Project",
+        id: 13, number: "13", title: "osqufia Project",
         cover: osqufia1, url: "#",
         date: "Jun 2023", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [osqufia2, osqufia3, osqufia4, osqufia5, osqufia6, osqufia7, osqufia8, osqufia9, osqufia10, osqufia11, osqufia12, osqufia13, osqufia14, osqufia15, osqufia16],
     },
     {
-        id: 12, number: "13", title: "whitesand Project",
+        id: 14, number: "14", title: "whitesand Project",
         cover: whitesand1, url: "https://www.whitesand-eg.com/",
         date: "Nov 2021", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [whitesand2, whitesand3, whitesand4, whitesand5],
     },
     {
-        id: 13, number: "14", title: "us Project",
+        id: 15, number: "15", title: "us Project",
         cover: us1, url: "#",
         date: "May 2023", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [us2, us3, us4, us5, us6, us7, us8, us9],
     },
     {
-        id: 14, number: "15", title: "CMS Project",
+        id: 16, number: "16", title: "CMS Project",
         cover: cms, url: "#",
         date: "Feb 2021", wordpress: false, filter: "React",
         tags: "React · Custom CMS",
         gallery: [],
     },
     {
-        id: 15, number: "16", title: "HCR Project",
+        id: 17, number: "17", title: "HCR Project",
         cover: hcr1, url: "#",
         date: "Feb 2021", wordpress: false, filter: "C#",
         tags: "C# · Javascript · HTML . css",
         gallery: [],
     },
     {
-        id: 16, number: "17", title: "naseq Project",
+        id: 18, number: "18", title: "naseq Project",
         cover: naseq8, url: "#",
         date: "Feb 2021", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [],
     },
     {
-        id: 17, number: "18", title: "thite Project",
+        id: 19, number: "19", title: "thite Project",
         cover: thite1, url: "https://thiet.edu.eg/ar",
         date: "Feb 2021", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [thite2, thite3, thite4, thite5, thite6],
     },
     {
-        id: 18, number: "19", title: "henkleez Project",
+        id: 20, number: "20", title: "henkleez Project",
         cover: henkleez7, url: "https://www.henkleez.com/ar",
         date: "Feb 2021", wordpress: false, filter: "PHP",
         tags: "PHP · Javascript · HTML",
         gallery: [],
     },
     {
-        id: 19, number: "20", title: "market Project",
+        id: 21, number: "21", title: "market Project",
         cover: market9, url: "#",
         date: "Feb 2020", wordpress: false, filter: "HTML",
         tags: "HTML · E-Commerce",
         gallery: [market1, market2, market3, market4, market5],
     },
     {
-        id: 20, number: "21", title: "dashboed Project",
+        id: 22, number: "22", title: "dashboed Project",
         cover: dashboed7, url: "#",
         date: "Feb 2020", wordpress: false, filter: "HTML",
         tags: "HTML · Dashboard",
