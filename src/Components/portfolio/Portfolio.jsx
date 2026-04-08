@@ -134,7 +134,7 @@ const PROJECTS = [
     {
         id: 1, number: "01", title: "chitotech Project",
         cover: chitotech1, url: "https://chitotech-egypt.com/",
-        date: "Oct 2025", wordpress: true, filter: "React",
+        date: "Jan 2026", wordpress: true, filter: "React",
         tags: "React js",
         gallery: [chitotech1, chitotech2, chitotech3, chitotech4, chitotech5],
     },
