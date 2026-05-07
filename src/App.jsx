@@ -14,7 +14,7 @@ import Contact from "./Components/contact/Contact";
 function App() {
     return (
         <div className="App">
-            {/* <Switcher /> */}
+            <Switcher />
             <Header />
             {/* <Routes /> */}
             <Routes>

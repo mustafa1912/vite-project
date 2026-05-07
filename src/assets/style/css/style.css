@@ -2247,17 +2247,20 @@ body.light.contact ul.social li a:hover {
 .pf-card-number {
   position: absolute;
   top: 14px;
-  right: 14px;
+  left: 14px;
   font-family: "Bebas Neue", sans-serif;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.18);
+  color: white;
+  background: #f0b429;
   letter-spacing: 0.1em;
   z-index: 3;
   transition: color 0.3s;
+  border-radius: 4px;
 }
-.pf-card:hover .pf-card-number {
+/* .pf-card:hover .pf-card-number {
   color: #f0b429;
-}
+  background: white;
+} */
 
 .pf-accent-line {
   position: absolute;
