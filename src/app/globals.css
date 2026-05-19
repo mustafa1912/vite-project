@@ -24,7 +24,7 @@ body {
 
 /* ── STYLE SWITCHER CSS VARIABLE SETUP ────────────────────────────────────────── */
 :root {
-  --primary-color: #f59e0b;
+  --primary-color: #1000;
   /* Default Accent (Gold) */
   --bg-primary: #111111;
   /* Background (Matte Black) */
@@ -40,7 +40,7 @@ body {
 
 /* Color definitions */
 :root[data-theme="yellow"] {
-  --primary-color: #f59e0b;
+  --primary-color: #1000;
 }
 
 /* Accent: Rich Gold */
