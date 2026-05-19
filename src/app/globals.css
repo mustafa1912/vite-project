@@ -1,0 +1,994 @@
+/* Root globals.css */
+
+/* Fonts loaded via next/font in layout.tsx, and we reference variables here */
+body {
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif !important;
+}
+
+.poppins-font {
+  font-family: var(--font-outfit), "Outfit", sans-serif !important;
+}
+
+.open-sans-font {
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif !important;
+}
+
+/* Import original stylesheets */
+@import "../assets/style/fontawesome/fontawesome/css/all.min.css";
+@import "../assets/style/css/bootstrap.min.css";
+@import "../assets/style/css/preloader.min.css";
+@import "../assets/style/css/circle.css";
+@import "../assets/style/css/fm.revealator.jquery.min.css";
+@import "../assets/style/css/styleswitcher.css";
+@import "../assets/style/css/style.css";
+
+/* ── STYLE SWITCHER CSS VARIABLE SETUP ────────────────────────────────────────── */
+:root {
+  --primary-color: #f59e0b;
+  /* Default Accent (Gold) */
+  --bg-primary: #111111;
+  /* Background (Matte Black) */
+  --bg-secondary: #1e1e1e;
+  /* Surface (Charcoal) */
+  --text-primary: #e5e5e5;
+  /* Text (Soft Light Grey) */
+  --text-secondary: #a0a0a0;
+  /* Muted Text (Elegant Grey) */
+  --border-color: rgba(245, 158, 11, 0.12);
+  /* Translucent Gold Border */
+}
+
+/* Color definitions */
+:root[data-theme="yellow"] {
+  --primary-color: #f59e0b;
+}
+
+/* Accent: Rich Gold */
+:root[data-theme="blue"] {
+  --primary-color: #fbbf24;
+}
+
+/* Highlight: Vibrant Gold */
+:root[data-theme="purple"] {
+  --primary-color: #6957af;
+}
+
+:root[data-theme="red"] {
+  --primary-color: #f72b1c;
+}
+
+:root[data-theme="blueviolet"] {
+  --primary-color: #8a2be2;
+}
+
+:root[data-theme="goldenrod"] {
+  --primary-color: #daa520;
+}
+
+:root[data-theme="magenta"] {
+  --primary-color: #ee6192;
+}
+
+:root[data-theme="yellowgreen"] {
+  --primary-color: #9acd32;
+}
+
+:root[data-theme="orange"] {
+  --primary-color: #fa5b0f;
+}
+
+:root[data-theme="green"] {
+  --primary-color: #72b626;
+}
+
+/* Apply custom Slate-Blue colors across elements */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.home .home-details h6 {
+  color: var(--text-secondary) !important;
+}
+
+.home .home-details p {
+  color: var(--text-secondary) !important;
+}
+
+/* Cards & Background Overrides */
+.about .box-stats,
+.about .resume-box .icon,
+.about .resume-box .time,
+.portfolio .grid-gallery figure,
+.portfolio .slideshow figure,
+.portfolio .slideshow nav,
+.contact .contactform input[type=email],
+.contact .contactform input[type=text],
+.contact .contactform textarea,
+.blog .post-content,
+.blog .page-link,
+#menu,
+#menuToggle {
+  background-color: var(--bg-secondary) !important;
+}
+
+.about .c100::after {
+  background-color: var(--bg-primary) !important;
+}
+
+.about .c100 {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Header icon menu box backgrounds */
+.header ul.icon-menu li.icon-box {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Border color overrides */
+.about .box-stats {
+  border: 1px solid var(--border-color) !important;
+}
+
+.about .resume-box li::after {
+  border-left-color: var(--border-color) !important;
+}
+
+.contact .contactform input[type=email],
+.contact .contactform input[type=text],
+.contact .contactform textarea {
+  border: 1px solid var(--border-color) !important;
+}
+
+.blog .page-link {
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Text color overrides to ensure perfect Light Theme readability and high contrast */
+
+/* Primary Text Elements (Charcoal #1c1a14 on Light Background) */
+.home h1,
+.home h1 span,
+.title-section h1,
+.about h3,
+.about h5,
+.about .about-list .value,
+.about .resume-box .place,
+.about .box-stats h3,
+.about .c100 span,
+.contact h3,
+.contact .custom-span-contact,
+.blog h3,
+.blog h3 a,
+.blog .post-content .entry-header h3 a,
+.blog-post h1,
+.pf-card-name,
+.portfolio .slideshow figcaption h3,
+.contact .contactform input[type=email],
+.contact .contactform input[type=text],
+.contact .contactform textarea,
+#menu li a h2,
+#menu li a i,
+.header .icon-box h2,
+.header ul.icon-menu li.icon-box i {
+  color: var(--text-primary) !important;
+}
+
+/* Secondary Text Elements (Forest Green #064e3b on Beige #f0ebe0 Background) */
+.home h6,
+.home p,
+.home .home-details p,
+.about .about-list .title,
+.about .resume-box p,
+.about .resume-box .time,
+.about .box-stats p,
+.contact p,
+.contact .custom-span-contact span,
+.blog p,
+.blog .post-content .entry-content p,
+.blog-post p,
+.blog-post .meta,
+.blog-post .meta span,
+.pf-card-date,
+.pf-count,
+.pf-section-meta,
+.portfolio .slideshow figcaption p {
+  color: var(--text-secondary) !important;
+}
+
+/* Force overrides for primary theme color */
+.home h1,
+.about .box-stats h3,
+.title-section h1 span,
+#menu li.active a,
+body.light #menu li.active a,
+.blog .post-container:hover .post-content .entry-header h3 a,
+.blog .post-content .entry-header h3 a:hover,
+.contact .custom-span-contact i,
+.portfolio .slideshow figcaption h3,
+.portfolio .slideshow a,
+.portfolio .grid figure:hover figcaption,
+.blog-post .meta i {
+  color: var(--primary-color) !important;
+}
+
+/* Fix desktop icon box visibility: make active/hover icon white */
+.header ul.icon-menu li.icon-box.active i,
+.header ul.icon-menu li.icon-box:hover i {
+  color: #fff !important;
+}
+
+.home .home-details h1:before,
+.about .resume-box .icon,
+.contact ul.social li a:hover,
+body.light.contact ul.social li a:hover,
+.preloader .loader,
+.blog .page-link:hover,
+.blog .page-item.active .page-link,
+body.light.blog .page-link:hover,
+body.light.blog .page-item.active .page-link,
+.portfolio .grid li figure div,
+.header ul.icon-menu li.icon-box.active,
+.header ul.icon-menu li.icon-box:hover,
+body.light .header ul.icon-menu li.icon-box.active,
+body.light .header ul.icon-menu li.icon-box:hover,
+.btn,
+.header .icon-box h2,
+.home .color-block,
+.title-section hr,
+.portfolio .slideshow .carousel-indicators li.active,
+.button:before,
+.button-icon,
+.styleSecondColor,
+.about .box-stats.with-margin .top,
+.about .box-stats.with-margin .left,
+.about .box-stats.with-margin .bottom,
+.about .box-stats.with-margin .right {
+  background-color: var(--primary-color) !important;
+}
+
+.contact .contactform input[type=text]:focus,
+.contact .contactform input[type=email]:focus,
+.contact .contactform textarea:focus,
+body.light.contact .contactform input[type=text]:focus,
+body.light.contact .contactform input[type=email]:focus,
+body.light.contact .contactform textarea:focus,
+.blog .page-item.active .page-link,
+.blog .page-link:hover,
+body.light.blog .page-item.active .page-link,
+body.light.blog .page-link:hover,
+.button {
+  border-color: var(--primary-color) !important;
+}
+
+.about .box-stats.with-margin:hover {
+  border-color: var(--primary-color) !important;
+}
+
+.about .resume-box li:hover::after {
+  border-left-color: var(--primary-color) !important;
+}
+
+.blog .post-thumb {
+  border-bottom: 5px solid var(--primary-color) !important;
+}
+
+.pie,
+.c100 .bar,
+.c100.p51 .fill,
+.c100.p52 .fill,
+.c100.p53 .fill,
+.c100.p54 .fill,
+.c100.p55 .fill,
+.c100.p56 .fill,
+.c100.p57 .fill,
+.c100.p58 .fill,
+.c100.p59 .fill,
+.c100.p60 .fill,
+.c100.p61 .fill,
+.c100.p62 .fill,
+.c100.p63 .fill,
+.c100.p64 .fill,
+.c100.p65 .fill,
+.c100.p66 .fill,
+.c100.p67 .fill,
+.c100.p68 .fill,
+.c100.p69 .fill,
+.c100.p70 .fill,
+.c100.p71 .fill,
+.c100.p72 .fill,
+.c100.p73 .fill,
+.c100.p74 .fill,
+.c100.p75 .fill,
+.c100.p76 .fill,
+.c100.p77 .fill,
+.c100.p78 .fill,
+.c100.p79 .fill,
+.c100.p80 .fill,
+.c100.p81 .fill,
+.c100.p82 .fill,
+.c100.p83 .fill,
+.c100.p84 .fill,
+.c100.p85 .fill,
+.c100.p86 .fill,
+.c100.p87 .fill,
+.c100.p88 .fill,
+.c100.p89 .fill,
+.c100.p90 .fill,
+.c100.p91 .fill,
+.c100.p92 .fill,
+.c100.p93 .fill,
+.c100.p94 .fill,
+.c100.p95 .fill,
+.c100.p96 .fill,
+.c100.p97 .fill,
+.c100.p98 .fill,
+.c100.p99 .fill,
+.c100.p100 .fill {
+  border-color: var(--primary-color) !important;
+}
+
+/* Fix active menu color in desktop icon menu */
+.header ul.icon-menu li.icon-box.active {
+  background-color: var(--primary-color) !important;
+}
+
+.pf-filter-btn.active {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+/* Page transitions */
+.page-wrapper {
+  animation: pageFadeIn 0.5s ease-out forwards;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skeleton Loading styles */
+.skeleton-box {
+  background: #252525;
+  background: linear-gradient(90deg, #252525 25%, #333333 50%, #252525 75%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Fix styles switcher positioning */
+#switcher.true {
+  left: 0 !important;
+}
+
+#switcher.false {
+  left: -200px !important;
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* ── PREMIUM VISUAL POLISHING OVERRIDES ──────────────────────────────────────── */
+
+/* Core Button Overrides: Sleek, high-end design with Outfit typography */
+.button {
+  font-family: var(--font-outfit), "Outfit", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.2px !important;
+  border-radius: 30px !important;
+  padding: 15px 70px 15px 35px !important;
+  background: transparent !important;
+  border: 1px solid var(--primary-color) !important;
+  color: var(--text-primary) !important;
+  position: relative !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+  display: inline-block !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.05) !important;
+}
+
+.button::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, var(--primary-color), var(--text-secondary)) !important;
+  z-index: -1 !important;
+  transform: scaleX(0) !important;
+  transform-origin: right !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.button:hover {
+  border-color: transparent !important;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.25) !important;
+  transform: translateY(-2px) !important;
+  color: #111 !important;
+}
+
+.button:hover::before {
+  transform: scaleX(1) !important;
+  transform-origin: left !important;
+}
+
+.button .button-icon {
+  background-color: var(--primary-color) !important;
+  position: absolute !important;
+  right: -1px !important;
+  top: -1px !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 2 !important;
+}
+
+.button:hover .button-icon {
+  background-color: #fff !important;
+}
+
+.button .button-icon i {
+  color: #fff !important;
+  font-size: 16px !important;
+  transition: all 0.4s ease !important;
+}
+
+.button:hover .button-icon i {
+  color: var(--primary-color) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Fix style switcher button */
+#showSwitcher {
+  background-color: var(--primary-color) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 0 8px 8px 0 !important;
+  transition: transform 0.2s ease !important;
+}
+
+#showSwitcher:hover {
+  transform: scale(1.05);
+}
+
+#showSwitcher i {
+  color: #fff !important;
+  font-size: 22px !important;
+}
+
+/* Theme Switcher panel overrides */
+#switcher {
+  border-radius: 0 10px 10px 0 !important;
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--bg-secondary) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+#switcher h4 {
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  font-family: var(--font-outfit), "Outfit", sans-serif !important;
+  letter-spacing: 1px;
+}
+
+#switcher #hideSwitcher {
+  color: var(--text-primary) !important;
+  opacity: 0.6;
+  background-color: transparent !important;
+}
+
+#switcher #hideSwitcher:hover {
+  opacity: 1;
+}
+
+/* Dynamic Preloader line loader theme sync */
+.preloader .loader {
+  background-color: var(--primary-color) !important;
+}
+
+/* Typography polish: natural, clean alignment for hero details paragraph */
+.home .home-details p {
+  text-align: left !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: var(--text-primary) !important;
+}
+
+@media (max-width: 991px) {
+  .home .home-details p {
+    text-align: center !important;
+  }
+}
+
+/* Section Header Typography override to use Outfit */
+.title-section h1 {
+  font-family: var(--font-outfit), "Outfit", sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+}
+
+.title-section h1 span {
+  color: var(--primary-color) !important;
+}
+
+/* Premium Typography mappings using optimized Outfit */
+.pf-main-title,
+.pf-title-bg,
+.pf-hover-title,
+.pf-card-number,
+.pf-section-meta strong {
+  font-family: var(--font-outfit), "Outfit", sans-serif !important;
+  font-weight: 800 !important;
+}
+
+.pf-title-bg {
+  color: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Portfolio Filter Bar & Buttons theme overrides */
+.pf-filter-bar {
+  justify-content: center !important;
+}
+
+.pf-filter-btn {
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-outfit), "Outfit", sans-serif !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+  padding: 8px 22px !important;
+  transition: all 0.3s ease !important;
+}
+
+.pf-filter-btn:hover {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.pf-filter-btn.active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+/* Portfolio hover overlay text visibility */
+.pf-hover-tag {
+  color: #fff !important;
+  opacity: 0.9;
+}
+
+.pf-hover-date {
+  color: #ddd !important;
+  opacity: 0.8;
+}
+
+/* Portfolio grid footer responsive centering */
+@media (max-width: 560px) {
+  .pf-footer {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+/* Responsive stats box formatting on mobile */
+@media (max-width: 576px) {
+  .about .box-stats {
+    padding: 15px 15px 15px 15px !important;
+  }
+
+  .about .box-stats h3 {
+    font-size: 38px !important;
+  }
+
+  .about .box-stats h3:after {
+    right: -15px !important;
+    font-size: 22px !important;
+    top: -2px !important;
+  }
+}
+
+/* Dynamic Skill Card border and radial glow hover themes */
+.skill-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.skill-card:hover {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.skill-card:before {
+  background: radial-gradient(circle at 50% 0, var(--primary-color) 0%, transparent 70%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.35s ease !important;
+}
+
+.skill-card:hover:before {
+  opacity: 0.12 !important;
+}
+
+/* Social link hover icon colors */
+.contact ul.social li a {
+  transition: all 0.3s ease !important;
+}
+
+.contact ul.social li a:hover i {
+  color: #fff !important;
+  transform: scale(1.1);
+}
+
+.contact ul.social li a:hover {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ── PREMIUM PORTFOLIO ELEMENT OPTIMIZATIONS ────────────────────────────────── */
+
+.pf-grid .pf-card {
+  border: none !important;
+}
+
+.pf-card .pf-image-container {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.pf-card .pf-card-img {
+  object-fit: cover !important;
+}
+
+.pf-card .pf-card-name {
+  font-size: 18px !important;
+}
+
+/* Highly visible, premium rounded visit & gallery buttons */
+.pf-hover-overlay .pf-gallery-btn,
+.pf-hover-overlay .pf-visit-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.pf-hover-overlay .pf-gallery-btn i,
+.pf-hover-overlay .pf-visit-btn i {
+  font-size: 16px !important;
+  color: #fff !important;
+  transition: transform 0.3s ease !important;
+}
+
+.pf-hover-overlay .pf-gallery-btn:hover,
+.pf-hover-overlay .pf-visit-btn:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  transform: scale(1.1) translateY(-2px) !important;
+  box-shadow: 0 6px 15px rgba(245, 158, 11, 0.3) !important;
+}
+
+.pf-hover-overlay .pf-gallery-btn:hover i,
+.pf-hover-overlay .pf-visit-btn:hover i {
+  transform: scale(1.1) !important;
+  color: #fff !important;
+}
+
+/* ── PREMIUM LIGHTBOX OVERRIDES ─────────────────────────────────────────── */
+.custom-lightbox-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  backdrop-filter: blur(8px) !important;
+  animation: fadeIn 0.25s ease-out !important;
+}
+
+.lightbox-close {
+  position: absolute !important;
+  top: 20px !important;
+  right: 30px !important;
+  background: none !important;
+  border: none !important;
+  color: #fff !important;
+  font-size: 48px !important;
+  cursor: pointer !important;
+  z-index: 10000 !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.2s, transform 0.2s !important;
+}
+
+.lightbox-close:hover {
+  opacity: 1 !important;
+  transform: scale(1.1) !important;
+}
+
+.lightbox-nav {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: rgba(30, 30, 30, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  font-size: 30px !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  z-index: 10000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  user-select: none !important;
+}
+
+.lightbox-nav:hover {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  transform: translateY(-50%) scale(1.05) !important;
+}
+
+.lightbox-prev {
+  left: 30px !important;
+}
+
+.lightbox-next {
+  right: 30px !important;
+}
+
+.lightbox-content {
+  position: relative !important;
+  max-width: 85% !important;
+  max-height: 85% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.lightbox-image-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  max-height: 75vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.lightbox-image {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 75vh !important;
+  object-fit: contain !important;
+}
+
+.lightbox-caption {
+  width: 100% !important;
+  margin-top: 15px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  color: #fff !important;
+  font-family: var(--font-outfit), sans-serif !important;
+  padding: 0 5px !important;
+}
+
+.lightbox-caption h3 {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  color: var(--primary-color) !important;
+}
+
+.lightbox-counter {
+  font-size: 14px !important;
+  opacity: 0.8 !important;
+  font-family: var(--font-plus-jakarta), sans-serif !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .lightbox-nav {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 20px !important;
+  }
+  .lightbox-prev {
+    left: 10px !important;
+  }
+  .lightbox-next {
+    right: 10px !important;
+  }
+  .lightbox-close {
+    top: 10px !important;
+    right: 20px !important;
+    font-size: 36px !important;
+  }
+  .lightbox-content {
+    max-width: 95% !important;
+  }
+  .lightbox-caption h3 {
+    font-size: 15px !important;
+  }
+}
+
+/* ── BLOG PAGE LAYOUT STYLING ───────────────────────────────────────────── */
+.post-container {
+  background-color: var(--bg-secondary) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+  border: 1px solid var(--border-color) !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.post-container:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.post-thumb {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.post-thumb-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.post-container:hover .post-thumb-img {
+  transform: scale(1.06) !important;
+}
+
+.entry-meta {
+  font-size: 11px !important;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+}
+
+.entry-meta i {
+  margin-right: 6px !important;
+  color: var(--primary-color) !important;
+}
+
+.entry-title {
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  margin: 0 0 12px 0 !important;
+  font-weight: 700 !important;
+  font-family: var(--font-outfit), sans-serif !important;
+}
+
+.entry-title a {
+  text-decoration: none !important;
+  transition: color 0.25s ease !important;
+}
+
+.entry-title a:hover {
+  color: var(--primary-color) !important;
+}
+
+.entry-content {
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+  opacity: 0.8;
+  color: var(--text-primary) !important;
+}
+
+/* Pagination Overrides */
+.pagination .page-link {
+  padding: 8px 18px !important;
+  text-decoration: none !important;
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease !important;
+  font-family: var(--font-outfit), sans-serif !important;
+  font-weight: 600;
+}
+
+.pagination .page-link:hover {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
