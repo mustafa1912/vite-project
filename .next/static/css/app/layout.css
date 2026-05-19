@@ -1317,7 +1317,7 @@ body.light hr.separator {
 }
 
 .home .container-home {
-  display: flex;
+   display: flex;
   align-items: center;
   min-height: 100%;
 }
@@ -3398,6 +3398,7 @@ body.light.blog .page-link:hover,
 
 /* Page transitions */
 .page-wrapper {
+  overflow: hidden;
   animation: pageFadeIn 0.5s ease-out forwards;
 }
 
@@ -3506,6 +3507,7 @@ body.light.blog .page-link:hover,
   transform: scaleX(1) !important;
   transform-origin: left !important;
 }
+ 
 
 .button .button-icon {
   background-color: var(--primary-color) !important;
@@ -3523,7 +3525,7 @@ body.light.blog .page-link:hover,
 }
 
 .button:hover .button-icon {
-  background-color: #fff !important;
+  background-color: var(--primary-color) !important;
 }
 
 .button .button-icon i {

@@ -1,4 +1,4 @@
-// File: D:\codeing\vite-project\src\app\contact\page.tsx
+// File: E:\my Programs\web\profile\vite-project\src\app\contact\page.tsx
 import * as entry from '../../../../src/app/contact/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

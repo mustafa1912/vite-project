@@ -1,4 +1,4 @@
-// File: D:\codeing\vite-project\src\app\resume\page.tsx
+// File: E:\my Programs\web\profile\vite-project\src\app\resume\page.tsx
 import * as entry from '../../../../src/app/resume/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

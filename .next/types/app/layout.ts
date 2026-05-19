@@ -1,4 +1,4 @@
-// File: D:\codeing\vite-project\src\app\layout.tsx
+// File: E:\my Programs\web\profile\vite-project\src\app\layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
