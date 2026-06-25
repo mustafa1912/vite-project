@@ -9,19 +9,29 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
   const [loading, setLoading] = useState(true);
   const pathname = usePathname();
 
-  // Handle page load preloader
+  // Handle page load preloader — use window load event rather than arbitrary timeout
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (document.readyState === 'complete') {
       setLoading(false);
-    }, 600);
-    return () => clearTimeout(timer);
+    } else {
+      const handleLoad = () => setLoading(false);
+      window.addEventListener('load', handleLoad);
+      // Fallback: if load event never fires within 1.5s, hide preloader
+      const fallback = setTimeout(() => setLoading(false), 1500);
+      return () => {
+        window.removeEventListener('load', handleLoad);
+        clearTimeout(fallback);
+      };
+    }
   }, []);
 
   // IntersectionObserver Scroll Animation (Revealator Replacement)
   useEffect(() => {
-    // We add a tiny delay to allow hydration and page contents to mount fully
-    const observerTimer = setTimeout(() => {
-      const observer = new IntersectionObserver(
+    // Store observer outside setTimeout so the cleanup function can reference it
+    let observer: IntersectionObserver | null = null;
+
+    const timer = setTimeout(() => {
+      observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -34,15 +44,15 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
       );
 
       // Select all elements with class revealator- or skill-card
-      const elements = document.querySelectorAll(
-        '[class*="revealator-"], .skill-card, .box-stats, .resume-box li'
-      );
-      elements.forEach((el) => observer.observe(el));
-
-      return () => observer.disconnect();
+      document
+        .querySelectorAll('[class*="revealator-"], .skill-card, .box-stats, .resume-box li')
+        .forEach((el) => observer!.observe(el));
     }, 150);
 
-    return () => clearTimeout(observerTimer);
+    return () => {
+      clearTimeout(timer);
+      observer?.disconnect(); // Properly disconnects the observer on every route change
+    };
   }, [pathname]);
 
   return (

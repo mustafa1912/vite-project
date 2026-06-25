@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
-// Import profile image for mobile view
-import profileImg from '../../assets/img/me/H22C1262.webp';
+// Profile image served from public/assets/images/me/
+const profileImg = '/assets/images/me/H22C1262.webp';
 
 interface Skill {
   label: string;
@@ -22,6 +22,11 @@ interface TimelineItem {
 }
 
 const skills: Skill[] = [
+  { label: "TypeScript", abbr: "TS", tag: "Language", color: "#3178c6", bg: "#00152b", border: "#003d73" },
+  { label: "Next.js", abbr: "NXT", tag: "Framework", color: "#ffffff", bg: "#111111", border: "#333333" },
+  { label: "Vue.js", abbr: "VUE", tag: "Framework", color: "#42b883", bg: "#001a11", border: "#004d33" },
+  { label: "Nuxt.js", abbr: "NXT", tag: "Framework", color: "#00dc82", bg: "#001a0f", border: "#004d2e" },
+  { label: "PHP", abbr: "PHP", tag: "Language", color: "#777bb4", bg: "#0d0f1a", border: "#25273d" },
   { label: "HTML 5", abbr: "HTML5", tag: "Markup", color: "#f0a500", bg: "#1a1200", border: "#3a2a00" },
   { label: "CSS 3", abbr: "CSS3", tag: "Styling", color: "#38bdf8", bg: "#001220", border: "#003050" },
   { label: "JavaScript", abbr: "JS", tag: "Language", color: "#facc15", bg: "#1a1500", border: "#3a3000" },
@@ -109,29 +114,30 @@ export default function ResumePage() {
                       className="img-fluid"
                       title="Mostafa Wahba"
                       priority
-                      placeholder="blur"
+                      width={230}
+                      height={270}
                     />
                   </div>
                 </div>
                 <div className="col-6">
                   <ul className="about-list list-unstyled open-sans-font">
-                    <li> 
+                    <li>
                       <span className="title">first name :</span>{' '}
                       <strong className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Mostafa</strong>
                     </li>
-                    <li> 
+                    <li>
                       <span className="title">last name :</span>{' '}
                       <strong className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Wahba afifa</strong>
                     </li>
-                    <li> 
+                    <li>
                       <span className="title">Age :</span>{' '}
-                      <strong className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">25 Years</strong> 
+                      <strong className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">25 Years</strong>
                     </li>
-                    <li> 
+                    <li>
                       <span className="title">Nationality :</span>{' '}
                       <strong className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Egypt</strong>
                     </li>
-                    <li> 
+                    <li>
                       <span className="title">Freelance :</span>{' '}
                       <strong className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Available</strong>
                     </li>
@@ -139,33 +145,33 @@ export default function ResumePage() {
                 </div>
                 <div className="col-6">
                   <ul className="about-list list-unstyled open-sans-font">
-                    <li> 
+                    <li>
                       <span className="title">Address :</span>{' '}
                       <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Quesna Menoufia</span>
                     </li>
-                    <li> 
+                    <li>
                       <span className="title">phone :</span>{' '}
                       <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">
                         <a href="tel:01002883812" className="text-light" aria-label="Call me at 01002883812">01002883812</a>
                       </span>
                     </li>
-                    <li> 
+                    <li>
                       <span className="title">Email :</span>{' '}
                       <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">
                         <a href="mailto:mostafw338@gmail.com" className="text-light" aria-label="Email me at mostafw338@gmail.com">mostafw338@gmail.com</a>
                       </span>
                     </li>
-                    <li> 
+                    <li>
                       <span className="title">languages :</span>{' '}
-                      <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Arabic, English, Italian</span> 
+                      <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Arabic, English, Italian</span>
                     </li>
                   </ul>
                 </div>
                 <div className="col-12 mt-3">
-                  <a 
-                    className="button" 
-                    href="/assets/mostafa_wahba_FrontEnd_cv.pdf" 
-                    download="mostafa_wahba_FrontEnd_cv.pdf"
+                  <a
+                    className="button"
+                    href="/Mostafa_Wahba_Frontend_Developer_CV.pdf"
+                    download="Mostafa_Wahba_Frontend_Developer_CV.pdf"
                     aria-label="Download my Curriculum Vitae in PDF format"
                   >
                     <span className="button-text">Download CV</span>
@@ -237,13 +243,13 @@ export default function ResumePage() {
           {/*<!-- Skills Starts --> */}
           <section className="row" aria-labelledby="skills-heading">
             <div className="col-12">
-              <h2 
+              <h2
                 id="skills-heading"
                 className="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600 h3"
               >
                 My Skills
               </h2>
-            </div> 
+            </div>
             <div className="skills-grid my-4">
               {skills.map((skill, i) => (
                 <div
@@ -275,7 +281,7 @@ export default function ResumePage() {
           {/*<!-- Experience & Education Starts --> */}
           <section className="row" aria-labelledby="experience-heading">
             <div className="col-12">
-              <h2 
+              <h2
                 id="experience-heading"
                 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600 h3"
               >
@@ -298,11 +304,11 @@ export default function ResumePage() {
                       {item.description}
                     </p>
                     <div className="text-right">
-                      <a 
-                        href={item.certificateUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="button mt-3" 
+                      <a
+                        href={item.certificateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button mt-3"
                         aria-label={`View ${item.title} Certificate`}
                       >
                         <span className="button-text">certificate</span>

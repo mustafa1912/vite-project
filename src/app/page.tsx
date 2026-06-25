@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Import local profile image for automatic size optimization
-import profileImg from '../assets/img/me/H22C1262.webp';
+// Profile image served from public/assets/images/me/
+const profileImg = '/assets/images/me/H22C1262.webp';
 
 export default function Home() {
   return (
@@ -31,18 +31,19 @@ export default function Home() {
                   alt="Mostafa Wahba portrait photo"
                   className="img-fluid"
                   title="Mostafa Wahba"
-                  priority // Preloads for better LCP (Largest Contentful Paint)
-                  placeholder="blur"
+                  priority
+                  width={540}
+                  height={720}
                 />
               </div>
 
               <h1 className="text-uppercase poppins-font">
                 I'm mostafa wahba.
-                <span>Frontend & WordPress Developer</span>
+                <span>Full Stack & Modern JS Developer</span>
               </h1>
               
               <p className="open-sans-font">
-                I am a highly skilled Frontend & WordPress Developer specializing in React.js, Next.js, and custom-built WordPress themes. I build high-performance, responsive web applications and speed-optimized WooCommerce stores that deliver flawless user experiences and advanced SEO rankings.
+                I am a versatile Software Developer specializing in modern JavaScript ecosystems (React/Next.js, Vue/Nuxt.js) and robust backend architectures (Laravel, PHP). I build high-performance, scalable web applications, ranging from complex enterprise ERP systems to conversion-optimized headless e-commerce stores.
               </p>
               
               <Link className="button" href="/resume" aria-label="Read more about my skills and experience">

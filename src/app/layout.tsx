@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
 
-import './globals.css';
+ import './globals.css';
 import LayoutClient from './layout-client';
 
 // Load fonts with Next.js font optimization (local self-hosting during build)

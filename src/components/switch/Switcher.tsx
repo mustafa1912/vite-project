@@ -3,61 +3,46 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-// Import images
-import purple from '../../assets/images/purple.png';
-import red from '../../assets/images/red.png';
-import blueviolet from '../../assets/images/blueviolet.png';
-import blue from '../../assets/images/blue.png';
-import goldenrod from '../../assets/images/goldenrod.png';
-import magenta from '../../assets/images/magenta.png';
-import yellowgreen from '../../assets/images/yellowgreen.png';
-import orange from '../../assets/images/orange.png';
-import green from '../../assets/images/green.png';
-import yellow from '../../assets/images/yellow.png';
+// Derived from a single source of truth to prevent COLOR_IMAGES/COLORS sync issues
+const THEME_COLORS = [
+  'purple', 'red', 'blueviolet', 'blue', 'goldenrod',
+  'magenta', 'yellowgreen', 'orange', 'green', 'yellow',
+] as const;
 
-const COLOR_IMAGES: Record<string, any> = {
-  purple,
-  red,
-  blueviolet,
-  blue,
-  goldenrod,
-  magenta,
-  yellowgreen,
-  orange,
-  green,
-  yellow,
+type ThemeColor = typeof THEME_COLORS[number];
+
+const COLOR_IMAGES: Record<ThemeColor, string> = {
+  purple: '/assets/images/color/purple.png',
+  red: '/assets/images/color/red.png',
+  blueviolet: '/assets/images/color/blueviolet.png',
+  blue: '/assets/images/color/blue.png',
+  goldenrod: '/assets/images/color/goldenrod.png',
+  magenta: '/assets/images/color/magenta.png',
+  yellowgreen: '/assets/images/color/yellowgreen.png',
+  orange: '/assets/images/color/orange.png',
+  green: '/assets/images/color/green.png',
+  yellow: '/assets/images/color/yellow.png',
 };
 
-const COLORS = [
-  'purple',
-  'red',
-  'blueviolet',
-  'blue',
-  'goldenrod',
-  'magenta',
-  'yellowgreen',
-  'orange',
-  'green',
-  'yellow',
-];
 
 export default function Switcher() {
   const [isSwitcherOpen, setIsSwitcherOpen] = useState(false);
-  const [activeColor, setActiveColor] = useState('yellow');
+  const [activeColor, setActiveColor] = useState<ThemeColor>('yellow');
   const [mounted, setMounted] = useState(false);
 
   const toggleSwitch = () => setIsSwitcherOpen((prev) => !prev);
 
   // Initialize theme from localStorage on client-side
   useEffect(() => {
-    const savedColor = localStorage.getItem('activeColor') || 'yellow';
-    setActiveColor(savedColor);
-    document.documentElement.setAttribute('data-theme', savedColor);
+    const saved = localStorage.getItem('activeColor') as ThemeColor | null;
+    const color: ThemeColor = THEME_COLORS.includes(saved as ThemeColor) ? (saved as ThemeColor) : 'yellow';
+    setActiveColor(color);
+    document.documentElement.setAttribute('data-theme', color);
     setMounted(true);
   }, []);
 
   // Update theme when activeColor changes
-  const handleColorChange = (color: string) => {
+  const handleColorChange = (color: ThemeColor) => {
     setActiveColor(color);
     localStorage.setItem('activeColor', color);
     document.documentElement.setAttribute('data-theme', color);
@@ -73,7 +58,7 @@ export default function Switcher() {
         <div className="content-switcher">
           <h4>STYLE SWITCHER</h4>
           <ul>
-            {COLORS.map((color) => (
+            {THEME_COLORS.map((color) => (
               <li key={color}>
                 <button
                   onClick={() => handleColorChange(color)}
