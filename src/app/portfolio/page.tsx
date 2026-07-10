@@ -22,7 +22,21 @@ const FILTERS = ["All", "WordPress", "React", "PHP", "C#", "HTML"];
 
 const PROJECTS: Project[] = [
   {
-    id: 1, number: "01", title: "Enterprise  ERP System",
+    id: 101, number: "01", title: "ROI Development",
+    cover: "/assets/images/roi-development1_result.webp", url: "https://roi-development.com/",
+    date: "Jul 2026", wordpress: true, filter: "WordPress",
+    tags: "WordPress · Custom Theme · Responsive Design · SEO",
+    gallery: Array.from({ length: 7 }, (_, i) => `/assets/images/roi-development${i + 1}_result.webp`),
+  },
+  {
+    id: 102, number: "02", title: "Academy Pure Soft",
+    cover: "/assets/images/academy.pure-soft1_result.webp", url: "https://academy.pure-soft.com/",
+    date: "Jul 2026", wordpress: true, filter: "WordPress",
+    tags: "WordPress · Custom Theme · Responsive Design · SEO",
+    gallery: Array.from({ length: 11 }, (_, i) => `/assets/images/academy.pure-soft${i + 1}_result.webp`),
+  },
+  {
+    id: 1, number: "03", title: "Enterprise  ERP System",
     cover: "/assets/images/erp1_result.webp", url: "#",
     date: "Jun 2026", wordpress: false, filter: "React",
     tags: "React 19 · TypeScript · Laravel 12 · Tailwind 4 · ERP",
