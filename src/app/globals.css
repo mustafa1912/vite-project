@@ -998,7 +998,7 @@ body.light.blog .page-link:hover,
 .floating-whatsapp {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
   z-index: 990;
   display: flex;
   align-items: center;
@@ -1026,8 +1026,8 @@ body.light.blog .page-link:hover,
   content: "";
   position: absolute;
   top: -3px;
-  left: -3px;
   right: -3px;
+  left: -3px;
   bottom: -3px;
   border-radius: 50%;
   border: 2px solid rgba(37, 211, 102, 0.65);
@@ -1074,7 +1074,7 @@ body.light.blog .page-link:hover,
 /* Tooltip Badge */
 .floating-whatsapp-tooltip {
   position: absolute;
-  right: calc(100% + 14px);
+  left: calc(100% + 14px);
   top: 50%;
   transform: translateY(-50%) translateX(8px);
   background: var(--bg-secondary, #1e1e1e);
@@ -1097,16 +1097,7 @@ body.light.blog .page-link:hover,
   font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
 }
 
-.floating-whatsapp-tooltip::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -6px;
-  transform: translateY(-50%);
-  border-width: 6px 0 6px 6px;
-  border-style: solid;
-  border-color: transparent transparent transparent var(--bg-secondary, #1e1e1e);
-}
+ 
 
 .floating-whatsapp:hover .floating-whatsapp-tooltip {
   opacity: 1;
@@ -1126,7 +1117,7 @@ body.light.blog .page-link:hover,
 @media (max-width: 768px) {
   .floating-whatsapp {
     bottom: 22px;
-    right: 20px;
+    left: 20px;
   }
   .floating-whatsapp-btn {
     width: 52px;
