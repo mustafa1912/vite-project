@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Switcher from '../components/switch/Switcher';
 import Header from '../components/layout/Header';
+import FloatingWhatsApp from '../components/layout/FloatingWhatsApp';
 
 export default function LayoutClient({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
@@ -68,9 +69,10 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
       </div>
 
       <div className="App">
-        {/* Style Switcher & Floating Header */}
+        {/* Style Switcher, Floating Header & Floating WhatsApp */}
         <Switcher />
         <Header />
+        <FloatingWhatsApp />
 
         {/* Dynamic transition layout wrapper per page route */}
         <main key={pathname} className="page-wrapper">

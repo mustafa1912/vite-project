@@ -171,6 +171,8 @@ export default function ResumePage() {
                   <a
                     className="button"
                     href="/Mostafa_Wahba_Frontend_Developer_CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     download="Mostafa_Wahba_Frontend_Developer_CV.pdf"
                     aria-label="Download my Curriculum Vitae in PDF format"
                   >

@@ -100,6 +100,17 @@ export default function ContactPage() {
                     <i className="fa-brands fa-github" aria-hidden="true"></i>
                   </a>
                 </li>
+                <li className="whatsapp">
+                  <a 
+                    title="WhatsApp" 
+                    href="https://wa.me/201002883812" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Chat with me on WhatsApp"
+                  >
+                    <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                  </a>
+                </li>
               </ul>
             </article>
             {/* <!-- Left Side Info Ends --> */}
