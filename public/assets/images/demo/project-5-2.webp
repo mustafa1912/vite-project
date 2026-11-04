@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+    <defs>
+      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#31102b"/>
+        <stop offset="100%" stop-color="#170614"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#bg)"/>
+    <rect x="40" y="40" width="720" height="520" rx="16" fill="#111827" fill-opacity="0.88" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+    <circle cx="70" cy="70" r="6" fill="#ef4444"/>
+    <circle cx="90" cy="70" r="6" fill="#f59e0b"/>
+    <circle cx="110" cy="70" r="6" fill="#10b981"/>
+    <line x1="40" y1="95" x2="760" y2="95" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="400" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">Cognitive AI Studio</text>
+    <text x="400" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Model Fine-Tuning & Pipeline</text>
+    <rect x="290" y="360" width="220" height="46" rx="8" fill="#f59e0b"/>
+    <text x="400" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#000000" text-anchor="middle">LIVE PREVIEW DEMO</text>
+  </svg>

@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-// Profile image served from public/assets/images/me/
-const profileImg = '/assets/images/me/H22C1262.webp';
+import { siteConfig } from '../config/site';
 
 export default function Home() {
   return (
@@ -19,7 +17,10 @@ export default function Home() {
           <div 
             className="col-lg-4 bg position-fixed d-none d-lg-block" 
             role="img" 
-            aria-label="Mostafa Wahba Portrait Background"
+            aria-label={`${siteConfig.name} Portrait Background`}
+            style={{
+              backgroundImage: `url(${siteConfig.avatar})`,
+            }}
           />
           
           <div className="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
@@ -27,10 +28,10 @@ export default function Home() {
               {/* Next/Image optimized responsive image for mobile viewports */}
               <div className="d-sm-block d-lg-none rounded overflow-hidden mx-auto mb-4" style={{ maxWidth: '270px', border: '4px solid #252525' }}>
                 <Image
-                  src={profileImg}
-                  alt="Mostafa Wahba portrait photo"
+                  src={siteConfig.avatar}
+                  alt={`${siteConfig.name} portrait`}
                   className="img-fluid"
-                  title="Mostafa Wahba"
+                  title={siteConfig.name}
                   priority
                   width={540}
                   height={720}
@@ -38,16 +39,16 @@ export default function Home() {
               </div>
 
               <h1 className="text-uppercase poppins-font">
-                I'm mostafa wahba.
-                <span>Full Stack & Modern JS Developer</span>
+                I'm {siteConfig.name}.
+                <span>{siteConfig.role}</span>
               </h1>
               
               <p className="open-sans-font">
-                I am a versatile Software Developer specializing in modern JavaScript ecosystems (React/Next.js, Vue/Nuxt.js) and robust backend architectures (Laravel, PHP). I build high-performance, scalable web applications, ranging from complex enterprise ERP systems to conversion-optimized headless e-commerce stores.
+                {siteConfig.shortBio}
               </p>
               
               <Link className="button" href="/resume" aria-label="Read more about my skills and experience">
-                <span className="button-text">Read more</span>
+                <span className="button-text">More About Me</span>
                 <span className="button-icon fa fa-arrow-right" aria-hidden="true"></span>
               </Link>
             </div>

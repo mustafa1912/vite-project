@@ -1131,3 +1131,120 @@ body.light.blog .page-link:hover,
     display: none;
   }
 }
+
+
+/* ── PORTFOLIO PAGINATION (PREMIUM GOLD/DARK THEME) ───────────────────────── */
+.pf-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.pf-page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pf-page-num,
+.pf-page-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 25px;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  outline: none;
+}
+
+.pf-page-num {
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.pf-page-num:hover:not(:disabled),
+.pf-page-nav-btn:hover:not(:disabled) {
+  background-color: var(--primary-color, #ffb400);
+  border-color: var(--primary-color, #ffb400);
+  color: #111111;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 180, 0, 0.25);
+}
+
+.pf-page-num.active {
+  background-color: var(--primary-color, #ffb400);
+  border-color: var(--primary-color, #ffb400);
+  color: #111111;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(255, 180, 0, 0.35);
+}
+
+.pf-page-num:focus-visible,
+.pf-page-nav-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 180, 0, 0.45);
+}
+
+.pf-page-num:disabled,
+.pf-page-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.pf-page-nav-btn i {
+  font-size: 13px;
+  transition: transform 0.2s ease;
+}
+
+.pf-page-nav-btn.prev-btn:hover:not(:disabled) i {
+  transform: translateX(-3px);
+}
+
+.pf-page-nav-btn.next-btn:hover:not(:disabled) i {
+  transform: translateX(3px);
+}
+
+.pf-ellipsis {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  padding: 0 4px;
+  user-select: none;
+}
+
+@media (max-width: 576px) {
+  .pf-pagination {
+    gap: 6px;
+  }
+  .pf-page-num,
+  .pf-page-nav-btn {
+    min-width: 38px;
+    height: 38px;
+    font-size: 13px;
+    padding: 0 12px;
+  }
+  .pf-page-num {
+    width: 38px;
+    height: 38px;
+  }
+}

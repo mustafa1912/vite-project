@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { siteConfig } from '../../config/site';
 
 interface FloatingWhatsAppProps {
   phoneNumber?: string;
@@ -8,9 +9,11 @@ interface FloatingWhatsAppProps {
 }
 
 export default function FloatingWhatsApp({
-  phoneNumber = '201002883812',
-  message,
+  phoneNumber = siteConfig.whatsapp.phoneNumber,
+  message = siteConfig.whatsapp.defaultMessage,
 }: FloatingWhatsAppProps) {
+  if (!siteConfig.whatsapp.enabled) return null;
+
   // Construct the wa.me URL
   const whatsappUrl = message
     ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
@@ -23,12 +26,12 @@ export default function FloatingWhatsApp({
         target="_blank"
         rel="noopener noreferrer"
         className="floating-whatsapp"
-        aria-label="Contact Mostafa Wahba via WhatsApp."
+        aria-label={`Contact ${siteConfig.name} via WhatsApp`}
         title="Contact via WhatsApp | Chat on WhatsApp"
       >
         <span className="floating-whatsapp-tooltip" aria-hidden="true">
           <span className="status-dot"></span>
-          <span>Contact via WhatsApp</span>
+          <span>Chat on WhatsApp</span>
         </span>
 
         <span className="floating-whatsapp-btn">

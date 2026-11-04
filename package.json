@@ -1,7 +1,20 @@
 {
-  "name": "mostafa-wahba-portfolio",
+  "name": "apex-nextjs-portfolio-template",
   "version": "1.0.0",
+  "description": "Apex - Creative Developer Portfolio & Resume Next.js 15 Template",
   "private": true,
+  "author": "CreativeDev",
+  "license": "Commercial",
+  "keywords": [
+    "nextjs",
+    "react",
+    "portfolio",
+    "developer",
+    "resume",
+    "vcard",
+    "cv",
+    "typescript"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,8 +32,8 @@
     "@types/node": "^22.10.1",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "typescript": "^5.7.2",
     "eslint": "^9.17.0",
-    "eslint-config-next": "^15.1.0"
+    "eslint-config-next": "^15.1.0",
+    "typescript": "^5.7.2"
   }
 }

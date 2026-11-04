@@ -1,0 +1,30 @@
+================================================================================
+APEX NEXT.JS PORTFOLIO TEMPLATE - LICENSING INFORMATION
+================================================================================
+
+This product is sold exclusively on the Envato Market platform (ThemeForest /
+Envato Elements). Usage of this item is subject to the Envato License Terms:
+
+- Regular License: https://themeforest.net/licenses/terms/regular
+- Extended License: https://themeforest.net/licenses/terms/extended
+
+Under the Regular License, you are granted a non-exclusive license to use this
+item for one single commercial or personal end product for yourself or for one
+client.
+
+Redistribution, reselling, or sub-licensing of this source code or its derivatives
+as a template, theme, or stock asset is strictly prohibited under Envato Terms.
+
+--------------------------------------------------------------------------------
+Third-Party Asset Licenses:
+--------------------------------------------------------------------------------
+1. Next.js, React, React DOM: MIT License
+2. TypeScript: Apache 2.0 License
+3. EmailJS Browser SDK: MIT License
+4. React Hot Toast: MIT License
+5. Font Awesome 6 Free: CC BY 4.0 / SIL OFL 1.1 / MIT License
+6. Google Fonts (Outfit, Plus Jakarta Sans): SIL Open Font License 1.1
+
+For full attribution and source links, please consult CREDITS.md.
+================================================================================
+
