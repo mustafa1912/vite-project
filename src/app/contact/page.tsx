@@ -71,7 +71,7 @@ export default function ContactPage() {
               <div className="open-sans-font custom-span-contact position-relative mb-4">
                 <i className="fa fa-envelope-open position-absolute" aria-hidden="true"></i>
                 <span className="d-block" style={{ textTransform: 'uppercase', fontSize: '12px', opacity: 0.8 }}>mail me</span>
-                <a className="text-light" href={`mailto:${personalInfo.email}`} aria-label={`Mail me at ${personalInfo.email}`}>
+                <a style={{ color: 'var(--text-heading)' }} href={`mailto:${personalInfo.email}`} aria-label={`Mail me at ${personalInfo.email}`}>
                   {personalInfo.email}
                 </a>
               </div>
@@ -79,7 +79,7 @@ export default function ContactPage() {
               <div className="open-sans-font custom-span-contact position-relative mb-4">
                 <i className="fa fa-phone-square position-absolute" aria-hidden="true"></i>
                 <span className="d-block" style={{ textTransform: 'uppercase', fontSize: '12px', opacity: 0.8 }}>call me</span>
-                <a className="text-light" href={`tel:${personalInfo.phone.replace(/[^0-9+]/g, '')}`} aria-label={`Call me at ${personalInfo.phone}`}>
+                <a style={{ color: 'var(--text-heading)' }} href={`tel:${personalInfo.phone.replace(/[^0-9+]/g, '')}`} aria-label={`Call me at ${personalInfo.phone}`}>
                   {personalInfo.phone}
                 </a>
               </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
               <div className="open-sans-font custom-span-contact position-relative mb-4">
                 <i className="fa fa-map-marker-alt position-absolute" aria-hidden="true"></i>
                 <span className="d-block" style={{ textTransform: 'uppercase', fontSize: '12px', opacity: 0.8 }}>location</span>
-                <span className="text-light">
+                <span style={{ color: 'var(--text-heading)' }}>
                   {personalInfo.address}
                 </span>
               </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '../../config/site';
+import TechIcon from '../../components/common/TechIcon';
 
 export default function ResumePage() {
   const { personalInfo, stats, skills, experience, education } = siteConfig;
@@ -26,7 +27,7 @@ export default function ResumePage() {
                   <h2 className="text-uppercase custom-title mb-0 ft-wt-600 h3">personal infos</h2>
                 </div>
                 <div className="col-12 d-block d-sm-none mb-4">
-                  <div className="main-img-mobile rounded overflow-hidden mx-auto" style={{ maxWidth: '230px', border: '4px solid #252525' }}>
+                  <div className="main-img-mobile rounded overflow-hidden mx-auto" style={{ maxWidth: '230px', border: '4px solid var(--border-color)' }}>
                     <Image
                       src={siteConfig.avatar}
                       alt={siteConfig.name}
@@ -38,7 +39,7 @@ export default function ResumePage() {
                     />
                   </div>
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-sm-6 mb-3 mb-sm-0">
                   <ul className="about-list list-unstyled open-sans-font">
                     <li>
                       <span className="title">first name :</span>{' '}
@@ -62,7 +63,7 @@ export default function ResumePage() {
                     </li>
                   </ul>
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-sm-6">
                   <ul className="about-list list-unstyled open-sans-font">
                     <li>
                       <span className="title">Address :</span>{' '}
@@ -71,7 +72,7 @@ export default function ResumePage() {
                     <li>
                       <span className="title">phone :</span>{' '}
                       <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">
-                        <a href={`tel:${personalInfo.phone.replace(/[^0-9+]/g, '')}`} className="text-light" aria-label={`Call ${personalInfo.phone}`}>
+                        <a href={`tel:${personalInfo.phone.replace(/[^0-9+]/g, '')}`} style={{ color: 'var(--text-heading)' }} aria-label={`Call ${personalInfo.phone}`}>
                           {personalInfo.phone}
                         </a>
                       </span>
@@ -79,7 +80,7 @@ export default function ResumePage() {
                     <li>
                       <span className="title">Email :</span>{' '}
                       <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">
-                        <a href={`mailto:${personalInfo.email}`} className="text-light" aria-label={`Email ${personalInfo.email}`}>
+                        <a href={`mailto:${personalInfo.email}`} style={{ color: 'var(--text-heading)' }} aria-label={`Email ${personalInfo.email}`}>
                           {personalInfo.email}
                         </a>
                       </span>
@@ -94,7 +95,18 @@ export default function ResumePage() {
                     </li>
                   </ul>
                 </div>
-                <div className="col-12 mt-3">
+                <div className="col-12 mt-3 d-flex flex-wrap gap-3">
+                  <a
+                    className="button"
+                    href="/Mostafa_Wahba_Frontend_Developer_CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download="Mostafa_Wahba_Frontend_Developer_CV.pdf"
+                    aria-label="Download my Curriculum Vitae in PDF format"
+                  >
+                    <span className="button-text">Download CV</span>
+                    <span className="button-icon fa fa-download" aria-hidden="true"></span>
+                  </a>
                   <Link 
                     className="button" 
                     href="/contact"
@@ -139,96 +151,157 @@ export default function ResumePage() {
                 MY SKILLS
               </h2>
             </div>
-            {skills.map((skill, idx) => (
-              <div key={idx} className="col-6 col-md-3 mb-3 mb-sm-5">
-                <div 
-                  className="skill-card text-center p-3 rounded"
-                  style={{
-                    backgroundColor: skill.bg,
-                    border: `1px solid ${skill.border}`,
-                    transition: 'transform 0.2s ease, box-shadow 0.2s ease'
-                  }}
-                >
-                  <span 
-                    className="skill-abbr d-inline-block rounded-circle mb-2"
-                    style={{
-                      width: '45px',
-                      height: '45px',
-                      lineHeight: '45px',
-                      backgroundColor: skill.color,
-                      color: '#000',
-                      fontWeight: 800,
-                      fontSize: '14px',
-                    }}
+            <div className="col-12">
+              <div className="skills-grid my-3">
+                {skills.map((skill, idx) => (
+                  <div 
+                    key={idx} 
+                    className="skill-card visible"
                   >
-                    {skill.abbr}
-                  </span>
-                  <h3 className="poppins-font h6 m-0 text-white">{skill.label}</h3>
-                  <span className="badge mt-2" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: skill.color, fontSize: '11px' }}>
-                    {skill.tag}
-                  </span>
-                </div>
+                    <div
+                      className="skill-icon-box"
+                      aria-hidden="true"
+                    >
+                      <TechIcon name={skill.label} size={34} />
+                    </div>
+                    <strong className="skill-name">{skill.label}</strong>
+                    <span className="skill-tag">{skill.tag}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </section>
           {/* Skills Section Ends */}
 
-          <hr className="separator mt-1" />
+          <hr className="separator mt-4 mb-4" />
 
-          {/* Experience & Education Starts */}
+          {/* Experience Section Starts */}
           <section className="row" aria-labelledby="experience-heading">
             <div className="col-12">
-              <h2 id="experience-heading" className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600 h3">
-                EXPERIENCE &amp; EDUCATION
+              <h2 id="experience-heading" className="text-uppercase pb-4 pb-sm-5 mb-0 text-left text-sm-center custom-title ft-wt-600 h3">
+                EXPERIENCE
               </h2>
             </div>
-            <div className="col-lg-6 m-15px-tb">
-              <h3 className="h4 poppins-font mb-4 text-warning">
-                <i className="fa fa-briefcase me-2" aria-hidden="true"></i> Experience
-              </h3>
-              <div className="resume-box">
-                <ul>
-                  {experience.map((item, idx) => (
-                    <li key={idx}>
-                      <div className="icon">
-                        <i className="fa fa-briefcase" aria-hidden="true"></i>
+            <div className="col-12">
+              <div className="exp-grid my-3">
+                {experience.map((item, idx) => (
+                  <article key={idx} className="exp-card">
+                    <div className="exp-card-header">
+                      <div className="exp-card-icon-box" aria-hidden="true">
+                        <i className="fa fa-briefcase"></i>
                       </div>
-                      <span className="time open-sans-font text-uppercase">{item.time}</span>
-                      <h4 className="poppins-font text-uppercase">
-                        {item.title}
-                        <span className="place open-sans-font d-block text-capitalize text-muted">{item.place}</span>
-                      </h4>
-                      <p className="open-sans-font">{item.description}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+                      <div className="exp-card-badges">
+                        <span className="exp-time-badge">
+                          <i className="fa fa-calendar-o" aria-hidden="true"></i>
+                          {item.time}
+                        </span>
+                        {item.type && (
+                          <span className="exp-type-badge">{item.type}</span>
+                        )}
+                      </div>
+                    </div>
 
-            <div className="col-lg-6 m-15px-tb">
-              <h3 className="h4 poppins-font mb-4 text-warning">
-                <i className="fa fa-graduation-cap me-2" aria-hidden="true"></i> Education
-              </h3>
-              <div className="resume-box">
-                <ul>
-                  {education.map((item, idx) => (
-                    <li key={idx}>
-                      <div className="icon">
-                        <i className="fa fa-graduation-cap" aria-hidden="true"></i>
+                    <h3 className="exp-card-title poppins-font">
+                      {item.title}
+                    </h3>
+
+                    <div className="exp-card-place">
+                      <i className="fa fa-building-o" aria-hidden="true"></i>
+                      <span>{item.place}</span>
+                    </div>
+
+                    <p className="exp-card-desc open-sans-font">
+                      {item.description}
+                    </p>
+
+                    {item.skills && item.skills.length > 0 && (
+                      <div className="exp-card-skills" aria-label="Skills applied">
+                        {item.skills.map((skill, sIdx) => (
+                          <span key={sIdx} className="exp-skill-tag">
+                            {skill}
+                          </span>
+                        ))}
                       </div>
-                      <span className="time open-sans-font text-uppercase">{item.time}</span>
-                      <h4 className="poppins-font text-uppercase">
-                        {item.title}
-                        <span className="place open-sans-font d-block text-capitalize text-muted">{item.place}</span>
-                      </h4>
-                      <p className="open-sans-font">{item.description}</p>
-                    </li>
-                  ))}
-                </ul>
+                    )}
+                  </article>
+                ))}
               </div>
             </div>
           </section>
-          {/* Experience & Education Ends */}
+          {/* Experience Section Ends */}
+
+          <hr className="separator mt-4 mb-4" />
+
+          {/* Education & Certifications Section Starts */}
+          <section className="row" aria-labelledby="education-heading">
+            <div className="col-12">
+              <h2 id="education-heading" className="text-uppercase pb-4 pb-sm-5 mb-0 text-left text-sm-center custom-title ft-wt-600 h3">
+                EDUCATION <span>&amp;</span> CERTIFICATIONS
+              </h2>
+            </div>
+            <div className="col-12">
+              <div className="edu-grid my-3">
+                {education.map((item, idx) => (
+                  <article key={idx} className="edu-card">
+                    <div className="edu-card-header">
+                      <div className="edu-card-icon-box" aria-hidden="true">
+                        <i className="fa fa-graduation-cap"></i>
+                      </div>
+                      <div className="edu-card-badges">
+                        <span className="edu-time-badge">
+                          <i className="fa fa-calendar-o" aria-hidden="true"></i>
+                          {item.time}
+                        </span>
+                        {item.type && (
+                          <span className="edu-type-badge">{item.type}</span>
+                        )}
+                      </div>
+                    </div>
+
+                    <h3 className="edu-card-title poppins-font">
+                      {item.title}
+                    </h3>
+
+                    <div className="edu-card-place">
+                      <i className="fa fa-university" aria-hidden="true"></i>
+                      <span>{item.place}</span>
+                    </div>
+
+                    <p className="edu-card-desc open-sans-font">
+                      {item.description}
+                    </p>
+
+                    {item.skills && item.skills.length > 0 && (
+                      <div className="edu-card-skills" aria-label="Key subjects">
+                        {item.skills.map((skill, sIdx) => (
+                          <span key={sIdx} className="edu-skill-tag">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    {item.certificateUrl && (
+                      <div className="edu-card-footer">
+                        <a
+                          href={item.certificateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="edu-cert-btn"
+                          aria-label={`View verified certificate for ${item.title}`}
+                        >
+                          <i className="fa fa-certificate" aria-hidden="true"></i>
+                          <span>View Certificate</span>
+                          <i className="fa fa-external-link" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+          {/* Education & Certifications Section Ends */}
         </div>
       </section>
     </section>

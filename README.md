@@ -8,7 +8,7 @@
 
 * ⚡ **Next.js 15 & React 19:** Powered by the latest App Router with automatic static prerendering.
 * 🛡️ **TypeScript 5:** 100% strictly typed codebase with zero linting or compile errors.
-* 🎨 **Dynamic 10-Color Style Switcher:** Instant theme switching with persistent local state and zero FOUC.
+* 🎨 **Tashteeb Light Palette:** Modern, elegant deep petrol & warm clay light palette with WCAG AAA compliance.
 * ⚙️ **Centralized Configuration (`src/config/site.ts`):** Modify your name, bio, skills, timeline, projects, and contact info from a single file in minutes.
 * 🖼️ **Interactive Project Gallery:** Built-in modal lightbox with keyboard navigation (`Esc`, `ArrowLeft`, `ArrowRight`).
 * 📬 **Working Contact Form:** EmailJS integration ready for deployment with `.env.example` template.
@@ -33,8 +33,7 @@ apex-template/
 │   │   └── globals.css         # Theme styles & variables
 │   ├── components/             # Reusable UI components
 │   │   ├── layout/             # Header, Navigation & WhatsApp widget
-│   │   ├── portfolio/          # Modal Lightbox gallery component
-│   │   └── switch/             # Color theme switcher
+│   │   └── portfolio/          # Modal Lightbox gallery component
 │   ├── config/
 │   │   └── site.ts             # ⭐ Central configuration file for all content
 │   └── assets/                 # Vector fonts, styles & icons

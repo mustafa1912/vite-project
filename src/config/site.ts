@@ -17,6 +17,8 @@ export interface TimelineItem {
   title: string;
   place: string;
   description: string;
+  type?: string;
+  skills?: string[];
   certificateUrl?: string;
 }
 
@@ -24,7 +26,7 @@ export interface ProjectItem {
   id: number;
   number: string;
   title: string;
-  filter: "WordPress" | "React" | "PHP" | "C#" | "HTML";
+  filter: "WordPress" | "React" | "PHP" | "C#" | "HTML" | "Webflow";
   date: string;
   cover: string;
   url?: string;
@@ -92,7 +94,7 @@ export const siteConfig = {
   // Skills
   skills: [
     { label: "TypeScript", abbr: "TS", tag: "Language", color: "#3178c6", bg: "#00152b", border: "#003d73" },
-    { label: "Next.js", abbr: "NXT", tag: "Framework", color: "#ffffff", bg: "#111111", border: "#333333" },
+    { label: "Next.js", abbr: "NXT", tag: "Framework", color: "#0D5257", bg: "var(--bg-surface)", border: "var(--border-color)" },
     { label: "React", abbr: "RC", tag: "Framework", color: "#61dafb", bg: "#001a26", border: "#004060" },
     { label: "Vue.js", abbr: "VUE", tag: "Framework", color: "#42b883", bg: "#001a11", border: "#004d33" },
     { label: "Nuxt.js", abbr: "NXT", tag: "Framework", color: "#00dc82", bg: "#001a0f", border: "#004d2e" },
@@ -108,61 +110,118 @@ export const siteConfig = {
   // Experience Timeline
   experience: [
     {
+      time: "2026 - Present",
+      title: "Senior Front-End Developer | WordPress Developer",
+      place: "PureSoft",
+      type: "On Site",
+      skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "WordPress" , "WebFlow"],
+      description: "Built and maintained responsive web applications using React.js, JavaScript, and Tailwind CSS, alongside custom WordPress and WooCommerce solutions. Integrated REST APIs and optimized performance and SEO for scalable web interfaces.",
+    },
+    {
       time: "2023 - Present",
-      title: "Senior Full Stack & Frontend Developer",
+      title: "Senior Front-End Developer | WordPress Developer",
       place: "Freelance & Agency Projects",
+      type: "Freelance",
+      skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "WordPress"],
       description: "Spearheaded the engineering of high-performance web applications, headless real estate portals, and custom WordPress WooCommerce solutions.",
+    },
+    {
+      time: "Jan 2023 - Apr 2023",
+      title: "Frontend Developer",
+      place: "Jawda Engineering Consultants - JEC",
+      type: "Freelance · Remote",
+      skills: ["WordPress", "Web Design", "UI/UX"],
+      description: "Engineered responsive corporate web solutions and custom WordPress platforms for JAWDA Engineering Consultants (JEC), specializing in high-voltage substations and electrical infrastructure across Egypt and Saudi Arabia.",
     },
     {
       time: "2021 - 2023",
       title: "Front End Web Developer",
       place: "NajezSoft & Digital Agencies",
+      type: "Agency",
+      skills: ["React", "JavaScript (ES6+)", "Bootstrap"],
       description: "Developed customized, mobile-first web applications using React, modern JavaScript (ES6+), Bootstrap, and responsive UI architectures.",
     },
-    {
-      time: "2020 - 2021",
-      title: "Web Developer",
-      place: "Self-Employed",
-      description: "Built and deployed conversion-optimized websites, custom themes, and eCommerce systems for diverse regional business clients.",
-    },
+
   ] as TimelineItem[],
 
   // Education & Certifications
   education: [
     {
-      time: "2026",
+      time: "2026 - March",
       title: "Modern JavaScript: ES6 and beyond",
       place: "MaharaTech - ITI",
+      type: "Professional Certification",
+      skills: ["ES6+", "Async JS", "Modules"],
       description: "Advanced mastery of modern ECMAScript specifications, asynchronous patterns, modules, and reactive JavaScript concepts.",
+      certificateUrl: "https://drive.google.com/file/d/1AybJLjU-OedLxZCCd5HQ8ux0qQp8dTzk/view?usp=drive_link",
     },
     {
-      time: "2026",
+      time: "2026 - March",
       title: "UX Design Fundamentals",
       place: "MaharaTech - ITI",
+      type: "Design Certification",
+      skills: ["UI/UX", "Wireframing", "Design Systems"],
       description: "Foundational user experience design, cognitive hierarchy, wireframing, usability testing, and design systems.",
+      certificateUrl: "https://drive.google.com/file/d/1hVBaE8zNXdZW_0m4MTuYySTGYvkCTIkF/view?usp=drive_link",
     },
     {
-      time: "2022",
-      title: "React JS Advanced Specialization",
+      time: "2022 - May",
+      title: "React JS",
       place: "MaharaTech - ITI",
-      description: "Single-page application state architecture, hooks, performance profiling, and component-driven engineering with React.",
+      type: "Frontend Certification",
+      skills: ["React.js", "Hooks", "Component Architecture"],
+      description: "Fast, scalable, and modern component-driven web application engineering using React architecture.",
+      certificateUrl: "https://drive.google.com/file/d/1NMyXoeObIqROkRpw7NtXyHRwPiVQWSTy/view?usp=sharing",
     },
     {
-      time: "2021",
+      time: "2022 - March",
+      title: "JavaScript language",
+      place: "MaharaTech - ITI",
+      type: "Core Programming",
+      skills: ["JavaScript", "DOM APIs", "Event Loop"],
+      description: "Comprehensive program covering core JavaScript programming, asynchronous event loop, and DOM APIs.",
+      certificateUrl: "https://drive.google.com/file/d/1IllikQFLKryBLU1saBMqiP9zN9rDPJk3/view?usp=drive_link",
+    },
+    {
+      time: "2021 - November",
       title: "Front End Web Development Professional",
       place: "Udacity",
-      description: "Intensive nanotechnology scholarship covering core DOM manipulation, modern responsive web layouts, and interactive SPAs.",
+      type: "Nanodegree",
+      skills: ["Frontend", "Responsive CSS", "Build Tools"],
+      description: "Nanodegree program covering modern JavaScript, responsive CSS grid architectures, and interactive SPAs.",
+      certificateUrl: "https://drive.google.com/file/d/1mssGMKomiRFzE5XzSywFOgaBbq97j-pU/view?usp=drive_link",
+    },
+    {
+      time: "2021 - September",
+      title: "Web Development Challenger",
+      place: "Udacity",
+      type: "Nanodegree Foundation",
+      skills: ["HTML5", "CSS3", "JavaScript"],
+      description: "Web development fundamentals translating UI/UX concepts into accessible, standards-compliant websites.",
+      certificateUrl: "https://drive.google.com/file/d/11wHZ21qIkgeIOiSo_FV5gLfWaNgbqULR/view?usp=drive_link",
     },
   ] as TimelineItem[],
 
   // Portfolio Filters
-  portfolioFilters: ["All", "WordPress", "React", "PHP", "C#", "HTML"] as const,
+  portfolioFilters: ["All", "Webflow", "WordPress", "React", "PHP", "C#", "HTML"] as const,
 
-  // Portfolio Projects (All 30 authentic projects with real, valid images)
+  // Portfolio Projects (All 31 authentic projects with real, valid images)
   projects: [
     {
-      id: 104,
+      id: 105,
       number: "01",
+      title: "4d",
+      filter: "Webflow",
+      date: "10/2026",
+      cover: "/assets/images/4d1_result.webp",
+      url: "https://4d.sa",
+      tags: "Webflow · Creative Agency · Interactive UI/UX · Responsive Web Design",
+      gallery: Array.from({ length: 8 }, (_, i) => `/assets/images/4d${i + 1}_result.webp`),
+      summary: "Modern digital agency website built with Webflow featuring dynamic interactions, sleek animations, and responsive layout.",
+    },
+    {
+      id: 104,
+      number: "02",
       title: "mepco",
       filter: "WordPress",
       date: "Nov 2026",
@@ -173,7 +232,7 @@ export const siteConfig = {
     },
     {
       id: 103,
-      number: "02",
+      number: "03",
       title: "daralomran",
       filter: "React",
       date: "Nov 2026",
@@ -184,7 +243,7 @@ export const siteConfig = {
     },
     {
       id: 100,
-      number: "03",
+      number: "04",
       title: "hurghadaway",
       filter: "WordPress",
       date: "Jul 2026",
@@ -195,7 +254,7 @@ export const siteConfig = {
     },
     {
       id: 101,
-      number: "04",
+      number: "05",
       title: "ROI Development",
       filter: "WordPress",
       date: "Jul 2026",
@@ -206,7 +265,7 @@ export const siteConfig = {
     },
     {
       id: 102,
-      number: "05",
+      number: "06",
       title: "Academy Pure Soft",
       filter: "WordPress",
       date: "Jul 2026",
@@ -217,7 +276,7 @@ export const siteConfig = {
     },
     {
       id: 1,
-      number: "06",
+      number: "07",
       title: "Enterprise ERP System",
       filter: "React",
       date: "Jun 2026",
@@ -228,7 +287,7 @@ export const siteConfig = {
     },
     {
       id: 2,
-      number: "07",
+      number: "08",
       title: "Saif_dK Project",
       filter: "HTML",
       date: "May 2026",
@@ -239,7 +298,7 @@ export const siteConfig = {
     },
     {
       id: 3,
-      number: "08",
+      number: "09",
       title: "nutramena Project",
       filter: "WordPress",
       date: "May 2026",
@@ -250,7 +309,7 @@ export const siteConfig = {
     },
     {
       id: 4,
-      number: "09",
+      number: "10",
       title: "issgroups Project",
       filter: "WordPress",
       date: "Mar 2026",
@@ -261,7 +320,7 @@ export const siteConfig = {
     },
     {
       id: 5,
-      number: "10",
+      number: "11",
       title: "chitotech Project",
       filter: "WordPress",
       date: "Jan 2026",
@@ -272,7 +331,7 @@ export const siteConfig = {
     },
     {
       id: 6,
-      number: "11",
+      number: "12",
       title: "KanbanBoard Project",
       filter: "React",
       date: "Oct 2025",
@@ -283,7 +342,7 @@ export const siteConfig = {
     },
     {
       id: 7,
-      number: "12",
+      number: "13",
       title: "insidermenofia Project",
       filter: "WordPress",
       date: "Oct 2025",
@@ -294,7 +353,7 @@ export const siteConfig = {
     },
     {
       id: 8,
-      number: "13",
+      number: "14",
       title: "ugec Project",
       filter: "WordPress",
       date: "Nov 2024",
@@ -305,7 +364,7 @@ export const siteConfig = {
     },
     {
       id: 9,
-      number: "14",
+      number: "15",
       title: "jawdaconsultant Project",
       filter: "WordPress",
       date: "Jan 2024",
@@ -320,7 +379,7 @@ export const siteConfig = {
     },
     {
       id: 10,
-      number: "15",
+      number: "16",
       title: "al-motamizon Project",
       filter: "PHP",
       date: "Dec 2023",
@@ -331,7 +390,7 @@ export const siteConfig = {
     },
     {
       id: 11,
-      number: "16",
+      number: "17",
       title: "ghulam Project",
       filter: "PHP",
       date: "Nov 2023",
@@ -342,7 +401,7 @@ export const siteConfig = {
     },
     {
       id: 12,
-      number: "17",
+      number: "18",
       title: "noorcontrol Project",
       filter: "PHP",
       date: "Nov 2023",
@@ -353,7 +412,7 @@ export const siteConfig = {
     },
     {
       id: 13,
-      number: "18",
+      number: "19",
       title: "asiaf Project",
       filter: "PHP",
       date: "Oct 2023",
@@ -364,7 +423,7 @@ export const siteConfig = {
     },
     {
       id: 14,
-      number: "19",
+      number: "20",
       title: "kfs-hiet Project",
       filter: "React",
       date: "Aug 2023",
@@ -375,7 +434,7 @@ export const siteConfig = {
     },
     {
       id: 15,
-      number: "20",
+      number: "21",
       title: "citysquares Project",
       filter: "WordPress",
       date: "Jul 2023",
@@ -386,7 +445,7 @@ export const siteConfig = {
     },
     {
       id: 16,
-      number: "21",
+      number: "22",
       title: "osqufia Project",
       filter: "PHP",
       date: "Jun 2023",
@@ -397,7 +456,7 @@ export const siteConfig = {
     },
     {
       id: 17,
-      number: "22",
+      number: "23",
       title: "whitesand Project",
       filter: "PHP",
       date: "Nov 2021",
@@ -408,7 +467,7 @@ export const siteConfig = {
     },
     {
       id: 18,
-      number: "23",
+      number: "24",
       title: "us Project",
       filter: "PHP",
       date: "May 2023",
@@ -419,7 +478,7 @@ export const siteConfig = {
     },
     {
       id: 19,
-      number: "24",
+      number: "25",
       title: "CMS Project",
       filter: "React",
       date: "Feb 2021",
@@ -430,7 +489,7 @@ export const siteConfig = {
     },
     {
       id: 20,
-      number: "25",
+      number: "26",
       title: "HCR Project",
       filter: "C#",
       date: "Feb 2021",
@@ -441,7 +500,7 @@ export const siteConfig = {
     },
     {
       id: 21,
-      number: "26",
+      number: "27",
       title: "naseq Project",
       filter: "PHP",
       date: "Feb 2021",
@@ -452,7 +511,7 @@ export const siteConfig = {
     },
     {
       id: 22,
-      number: "27",
+      number: "28",
       title: "thite Project",
       filter: "PHP",
       date: "Feb 2021",
@@ -463,7 +522,7 @@ export const siteConfig = {
     },
     {
       id: 23,
-      number: "28",
+      number: "29",
       title: "henkleez Project",
       filter: "PHP",
       date: "Feb 2021",
@@ -474,7 +533,7 @@ export const siteConfig = {
     },
     {
       id: 24,
-      number: "29",
+      number: "30",
       title: "market Project",
       filter: "HTML",
       date: "Feb 2020",
@@ -492,7 +551,7 @@ export const siteConfig = {
     },
     {
       id: 25,
-      number: "30",
+      number: "31",
       title: "dashboed Project",
       filter: "HTML",
       date: "Feb 2020",

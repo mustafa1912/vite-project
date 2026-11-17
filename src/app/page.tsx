@@ -26,7 +26,7 @@ export default function Home() {
           <div className="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
             <div>
               {/* Next/Image optimized responsive image for mobile viewports */}
-              <div className="d-sm-block d-lg-none rounded overflow-hidden mx-auto mb-4" style={{ maxWidth: '270px', border: '4px solid #252525' }}>
+              <div className="d-sm-block d-lg-none rounded overflow-hidden mx-auto mb-4" style={{ maxWidth: '270px', border: '4px solid var(--border-color)' }}>
                 <Image
                   src={siteConfig.avatar}
                   alt={`${siteConfig.name} portrait`}

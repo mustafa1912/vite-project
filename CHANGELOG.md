@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - **Initial Release** of Apex - Creative Developer Portfolio & Resume Next.js 15 Template.
 - Built on Next.js 15 (App Router), React 19, and TypeScript 5.
 - Centralized site configuration file at `src/config/site.ts` for instant customization.
-- Clean 10-theme color switcher with instant local persistence and zero FOUC.
+- Elegant Tashteeb Light Palette design system with WCAG AAA accessibility standards.
 - Responsive interactive photo gallery with accessible keyboard-navigable Lightbox.
 - Fully functional contact form with EmailJS integration and graceful demo fallback.
 - Floating WhatsApp chat widget with configurable telephone and pre-filled greetings.

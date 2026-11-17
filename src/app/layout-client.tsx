@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import Switcher from '../components/switch/Switcher';
 import Header from '../components/layout/Header';
 import FloatingWhatsApp from '../components/layout/FloatingWhatsApp';
 
@@ -69,8 +68,7 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
       </div>
 
       <div className="App">
-        {/* Style Switcher, Floating Header & Floating WhatsApp */}
-        <Switcher />
+        {/* Floating Header & Floating WhatsApp */}
         <Header />
         <FloatingWhatsApp />
 

@@ -69,24 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable}`} suppressHydrationWarning>
-      <head>
-        {/* Inline blocking script to resolve active color theme synchronously and prevent FOUC */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var saved = localStorage.getItem('activeColor') || 'yellow';
-                  document.documentElement.setAttribute('data-theme', saved);
-                } catch (e) {
-                  document.documentElement.setAttribute('data-theme', 'yellow');
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
+    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable}`}>
       <body>
         <LayoutClient>
           {children}

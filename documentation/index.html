@@ -9,8 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #f59e0b;
-      --primary-hover: #d97706;
+      --primary: #0D5257;
+      --primary-hover: #D45D35;
       --bg-dark: #0f172a;
       --bg-card: #1e293b;
       --bg-sidebar: #0b1120;
@@ -74,7 +74,7 @@
       transition: all 0.2s ease;
     }
     .nav-list a:hover {
-      background-color: rgba(245, 158, 11, 0.12);
+      background-color: rgba(13, 82, 87, 0.15);
       color: var(--primary);
     }
     /* Content Area */
@@ -91,8 +91,8 @@
     .badge {
       display: inline-block;
       padding: 4px 10px;
-      background-color: rgba(245, 158, 11, 0.2);
-      color: var(--primary);
+      background-color: rgba(13, 82, 87, 0.2);
+      color: #38bdf8;
       border-radius: 999px;
       font-size: 12px;
       font-weight: 600;
@@ -122,7 +122,7 @@
       padding: 2px 6px;
       border-radius: 4px;
       font-size: 13px;
-      color: #f59e0b;
+      color: #38bdf8;
     }
     ul, ol { margin-left: 24px; margin-bottom: 18px; color: #cbd5e1; }
     li { margin-bottom: 8px; }
@@ -142,7 +142,7 @@
     .alert {
       padding: 16px;
       border-radius: 8px;
-      background-color: rgba(245, 158, 11, 0.1);
+      background-color: rgba(13, 82, 87, 0.15);
       border-left: 4px solid var(--primary);
       margin-bottom: 20px;
       font-size: 14px;
@@ -175,7 +175,7 @@
       <li><a href="#structure">4. Folder Structure</a></li>
       <li><a href="#configuration">5. Central Configuration</a></li>
       <li><a href="#emailjs">6. EmailJS Contact Form</a></li>
-      <li><a href="#colors">7. Color Switcher</a></li>
+      <li><a href="#colors">7. Theme &amp; Colors</a></li>
       <li><a href="#deployment">8. Deployment</a></li>
       <li><a href="#credits">9. Credits &amp; Support</a></li>
     </ul>
@@ -196,7 +196,7 @@
           <li><strong>Modern App Router:</strong> Built natively on Next.js 15 and React 19.</li>
           <li><strong>Type-Safe Architecture:</strong> Written in clean, strict TypeScript.</li>
           <li><strong>Zero Hardcoded Personal Data:</strong> All profile info, skills, projects, and contact data are controlled from a single configuration file (<code>src/config/site.ts</code>).</li>
-          <li><strong>Built-in 10-Color Theme Switcher:</strong> Instant theme switcher with client persistence.</li>
+          <li><strong>Tashteeb Light Palette:</strong> Deep petrol &amp; warm clay aesthetic with WCAG AAA accessibility.</li>
           <li><strong>Interactive Lightbox:</strong> Keyboard-navigable image gallery for portfolio items.</li>
           <li><strong>Working Contact Form:</strong> Ready for instant EmailJS integration.</li>
         </ul>
@@ -251,8 +251,7 @@
 │   │   └── globals.css         # Theme styles &amp; variables
 │   ├── components/             # Reusable UI components
 │   │   ├── layout/             # Header, Navigation &amp; Floating WhatsApp
-│   │   ├── portfolio/          # Modal Lightbox gallery
-│   │   └── switch/             # Color theme switcher
+│   │   └── portfolio/          # Modal Lightbox gallery
 │   ├── config/
 │   │   └── site.ts             # ⭐ Central configuration file for all content
 │   └── assets/                 # Styles, icons &amp; vector webfonts
@@ -342,10 +341,18 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key_here</code></pre>
     <!-- Section 7: Colors -->
     <section id="colors">
       <h2>7. Style &amp; Color Customization</h2>
-      <p>The template comes with 10 pre-configured color schemes:</p>
-      <p><code>yellow</code>, <code>green</code>, <code>orange</code>, <code>blue</code>, <code>red</code>, <code>purple</code>, <code>goldenrod</code>, <code>magenta</code>, <code>yellowgreen</code>, <code>blueviolet</code>.</p>
-      <p>To change the default accent color on initial load, modify line 40 in <code>src/components/switch/Switcher.tsx</code>:</p>
-      <pre><code>const color: ThemeColor = THEME_COLORS.includes(saved as ThemeColor) ? (saved as ThemeColor) : 'yellow';</code></pre>
+      <p>The template is designed around the <strong>Tashteeb Light Palette</strong> with custom CSS properties in <code>src/app/globals.css</code>:</p>
+      <pre><code>:root {
+  --bg-page: #F7F1E5;        /* Canvas Background */
+  --bg-surface: #FDFBF7;     /* Cards, Navbar &amp; Panels */
+  --border-color: #E8DFCE;   /* Dividers &amp; Borders */
+  --primary: #0D5257;        /* Deep Petrol Accent */
+  --primary-soft: #E1ECEC;   /* Badges &amp; Chips */
+  --secondary: #D45D35;      /* Warm Terracotta Accent */
+  --text-heading: #232524;   /* Headings */
+  --text-body: #646562;      /* Body Text */
+}</code></pre>
+      <p>To customize colors globally, simply modify these variables in <code>src/app/globals.css</code>.</p>
     </section>
 
     <!-- Section 8: Deployment -->
