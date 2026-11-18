@@ -181,7 +181,7 @@ export default function ContactPage() {
                       <span className="button-text">
                         {loading ? "Sending..." : "Send Message"}
                       </span>
-                      <span className="button-icon fa fa-send" aria-hidden="true"></span>
+                      <span className="button-icon fa fa-paper-plane" aria-hidden="true"></span>
                     </button>
                   </div>
                 </div>

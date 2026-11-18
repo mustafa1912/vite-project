@@ -95,7 +95,7 @@ export default function ResumePage() {
                     </li>
                   </ul>
                 </div>
-                <div className="col-12 mt-3 d-flex flex-wrap gap-3">
+                <div className="col-12 mt-3 d-flex flex-wrap gap-4">
                   <a
                     className="button"
                     href="/Mostafa_Wahba_Frontend_Developer_CV.pdf"
